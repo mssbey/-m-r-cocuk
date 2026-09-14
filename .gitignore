@@ -54,3 +54,5 @@ next-env.d.ts
 # çalışma zamanı günlükleri
 admin-server/node_modules/
 admin-server/*.log
+
+.vercel

@@ -1,0 +1,11 @@
+1/
+2/
+3/
+
+node_modules
+admin-server
+.next
+.git
+.env
+.env.local
+coverage

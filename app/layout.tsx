@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFloatingButton } from "@/components/layout/WhatsAppFloatingButton";
+import { AdminAwareChrome } from "@/components/layout/AdminAwareChrome";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/config";
@@ -55,10 +56,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col font-sans">
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppFloatingButton />
+        <AdminAwareChrome
+          header={<SiteHeader />}
+          footer={<Footer />}
+          whatsapp={<WhatsAppFloatingButton />}
+        >
+          {children}
+        </AdminAwareChrome>
       </body>
     </html>
   );

@@ -1,5 +1,16 @@
 # Ömür Çocuk — Yerel Ürün Yönetim Paneli
 
+> **Not:** Site artık Vercel + GitHub üzerinden yayınlanıyor ve
+> `/admin` adresinde (canlı sitede) bulut tabanlı bir yönetim paneli
+> var — ürün/görsel düzenlemeleri doğrudan GitHub'a commit atıp
+> Vercel'i otomatik yeniden deploy ettiriyor. Bu yüzden ana proje
+> artık statik export (`output: "export"`) modunda değil; aşağıdaki
+> **"Yayınla"** butonu (`next build` + `out/` → `httpdocs` kopyası)
+> bu nedenle artık çalışmaz. Panelin ürün/görsel düzenleme
+> özellikleri (listeleme, ekleme, silme, görsel yükleme) yerelde
+> yine çalışır, yalnızca yayınlama adımı devre dışıdır.
+
+
 Bu klasör, ana Next.js sitesinden tamamen ayrı, **yalnızca yerel
 bilgisayarınızda** çalışan küçük bir Express uygulamasıdır. Site statik
 export olarak (`httpdocs`'a yüklenen düz HTML/CSS/JS) yayınlandığı için

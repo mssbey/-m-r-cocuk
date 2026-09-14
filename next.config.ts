@@ -3,13 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   agentRules: false,
   /**
-   * Statik HTML export (ör. httpdocs / paylaşımlı hosting için). Node.js
-   * sunucusu gerektirmez; `npm run build` çıktısı `out/` klasörüne yazılır.
-   * Bu modda next/image'in sunucu tarafı optimizasyonu çalışmadığından
-   * `unoptimized: true` gerekir (görseller derleme sırasında zaten WebP'ye
-   * optimize edilmiştir, bkz. public/images/products).
+   * Not: bu proje önceden `output: "export"` (statik HTML, httpdocs/FTP
+   * hosting) kullanıyordu. Site artık Vercel + GitHub üzerinden deploy
+   * ediliyor ve /admin altında middleware + API route'larla çalışan bir
+   * bulut admin paneli var — statik export bu ikisiyle (middleware,
+   * dinamik route handler) tamamen uyumsuz olduğundan kaldırıldı.
+   * Normal Next.js sunucu modu Vercel'de zaten önerilen/varsayılan moddur.
    */
-  output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
   /**
