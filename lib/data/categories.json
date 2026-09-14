@@ -1,0 +1,97 @@
+[
+  {
+    "slug": "bebek-odalari",
+    "name": "Bebek Odaları",
+    "shortDescription": "Beşikten karyolaya, ilk günlerden itibaren güvenli ve şık yaşam alanları.",
+    "description": "Bebeğinizin ilk odasında güvenlik ve estetiği bir araya getiren bebek odası takımları, beşikler ve bebek karyolaları. Her ürün, uzun yıllar kullanılabilecek kaliteli malzemelerle tasarlanır.",
+    "imageFolder": "bebek-odalari",
+    "coverImage": "/images/products/bebek-odalari/vera-bebek-odasi-takimi-beyaz-01.webp",
+    "subcategories": [
+      { "slug": "bebek-odasi-takimlari", "name": "Bebek Odası Takımları" },
+      { "slug": "besikler", "name": "Beşikler" },
+      { "slug": "bebek-karyolalari", "name": "Bebek Karyolaları" }
+    ],
+    "seoTitle": "Bebek Odası Takımları ve Mobilyaları | Ömür Çocuk",
+    "seoDescription": "Beşik, bebek karyolası ve bebek odası takımı modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
+  },
+  {
+    "slug": "genc-odalari",
+    "name": "Genç Odaları",
+    "shortDescription": "Ranzalardan çalışma masalarına, gençlerin tarzına uygun fonksiyonel odalar.",
+    "description": "Genç odası takımları, ranzalar, çalışma masaları ve kitaplıklarla; büyüyen çocuklarınızın ihtiyaçlarına ve tarzına uygun kullanışlı yaşam alanları.",
+    "imageFolder": "genc-odalari",
+    "coverImage": "/images/products/genc-odalari/vera-full-oda-takimi-beyaz-01.webp",
+    "subcategories": [
+      { "slug": "genc-odasi-takimlari", "name": "Genç Odası Takımları" },
+      { "slug": "ranzalar", "name": "Ranzalar" },
+      { "slug": "cocuk-karyolalari", "name": "Çocuk Karyolaları" },
+      { "slug": "calisma-masalari", "name": "Çalışma Masaları" },
+      { "slug": "kitapliklar", "name": "Kitaplıklar" }
+    ],
+    "seoTitle": "Genç Odası Takımları ve Ranza Modelleri | Ömür Çocuk",
+    "seoDescription": "Genç odası takımı, ranza ve çalışma masası modelleri. Fonksiyonel ve şık genç odaları için Ömür Çocuk."
+  },
+  {
+    "slug": "montessori-odalari",
+    "name": "Montessori Odaları",
+    "shortDescription": "Çocukların bağımsız hareket edebileceği, güvende hissedebileceği alanlar.",
+    "description": "Montessori yaklaşımından ilham alan yer yataklarıyla, çocukların kendi odalarında daha bağımsız ve güvenli biçimde hareket etmesine olanak veren tasarımlar.",
+    "imageFolder": "montessori-odalari",
+    "coverImage": "/images/products/montessori-odalari/vera-montessori-catili-yatak-01.webp",
+    "subcategories": [
+      { "slug": "montessori-yataklar", "name": "Montessori Yataklar" }
+    ],
+    "seoTitle": "Montessori Çocuk Odası Yatakları | Ömür Çocuk",
+    "seoDescription": "Montessori yer yatakları ve çocuk odası mobilyaları. Esenyurt ve Gaziosmanpaşa mağazalarımızda keşfedin."
+  },
+  {
+    "slug": "dolap-gardrop",
+    "name": "Dolap & Gardırop",
+    "shortDescription": "Her oda için ferah ve kullanışlı saklama çözümleri.",
+    "description": "Bebek, çocuk ve genç odalarına uygun ölçülerde tasarlanan gardıroplar; düzenli ve ferah bir oda deneyimi sunar.",
+    "imageFolder": "dolap-gardrop",
+    "coverImage": "/images/products/dolap-gardrop/orion-4-kapakli-kitaplikli-cekmeceli-gardirop-aytasi-01.webp",
+    "subcategories": [
+      { "slug": "gardroplar", "name": "Gardıroplar" }
+    ],
+    "seoTitle": "Çocuk Odası Gardırop Modelleri | Ömür Çocuk",
+    "seoDescription": "Çocuk ve genç odaları için gardırop ve dolap modelleri. Kaliteli malzeme, kullanışlı tasarım."
+  },
+  {
+    "slug": "sifonyer-komodin",
+    "name": "Şifonyer & Komodin",
+    "shortDescription": "Bebek ve çocuk odalarını tamamlayan pratik parçalar.",
+    "description": "Şifonyerler ve komodinlerle bebek, çocuk ve genç odalarınızı tamamlayın. Farklı oda konseptleriyle uyumlu, kullanışlı tamamlayıcı ürünler.",
+    "imageFolder": "sifonyer-komodin",
+    "coverImage": "/images/products/sifonyer-komodin/sora-8-cekmeceli-sifonyer-01.webp",
+    "subcategories": [
+      { "slug": "sifonyerler", "name": "Şifonyerler" },
+      { "slug": "komodinler", "name": "Komodinler" },
+      { "slug": "tamamlayici-urunler", "name": "Tamamlayıcı Ürünler" }
+    ],
+    "seoTitle": "Şifonyer ve Komodin Modelleri | Ömür Çocuk",
+    "seoDescription": "Bebek ve çocuk odaları için şifonyer, komodin ve tamamlayıcı mobilya modelleri."
+  },
+  {
+    "slug": "bebek-arabalari",
+    "name": "Bebek Arabaları",
+    "shortDescription": "Konforlu ve güvenli yolculuklar için bebek arabaları.",
+    "description": "Şehir içi ve günlük kullanıma uygun bebek arabası modelleriyle bebeğiniz için konforlu, güvenli ve kullanışlı bir yolculuk deneyimi.",
+    "imageFolder": "bebek-arabalari",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Bebek Arabası Modelleri | Ömür Çocuk",
+    "seoDescription": "Konforlu ve güvenli bebek arabası modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
+  },
+  {
+    "slug": "kampanyali-urunler",
+    "name": "Kampanyalı Ürünler",
+    "shortDescription": "Güncel fırsatlar ve seçili modeller.",
+    "description": "Mağazalarımızdaki güncel kampanya kapsamındaki ürünler burada listelenir. Kampanya bulunmadığı dönemlerde bu bölüm boş görünebilir.",
+    "imageFolder": "kampanyali-urunler",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Kampanyalı Çocuk Odası Ürünleri | Ömür Çocuk",
+    "seoDescription": "Ömür Çocuk mağazalarındaki güncel kampanyalı ürünler ve fırsatlar."
+  }
+]

@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Google Drive'dan gelen ham ürün fotoğrafı kaynak klasörleri (~3.9 GB).
+# İşlenmiş/optimize edilmiş sürümleri public/images/products/ altındadır.
+# Bu klasörler yalnızca yeniden işleme ihtiyacı için referans olarak
+# tutulur; repoya dahil edilmemelidir. Bkz. README "Yayına Almadan Önce
+# Gerekenler" > "Eşleştirme Bekleyen Görseller".
+/1/
+/2/
+/3/
+
+# admin-server (yerel ürün yönetim paneli) kendi bağımlılıkları ve
+# çalışma zamanı günlükleri
+admin-server/node_modules/
+admin-server/*.log

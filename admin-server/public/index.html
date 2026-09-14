@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ömür Çocuk — Ürün Yönetimi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <h1>Ömür Çocuk <span>Ürün Yönetimi</span></h1>
+    </div>
+    <div class="topbar-right">
+      <span id="configInfo" class="config-info"></span>
+      <button id="publishBtn" class="btn btn-primary">Yayınla (Build + httpdocs)</button>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Ürün Listesi -->
+    <section id="listView" class="view">
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="Ürün adı ara..." />
+        <select id="categoryFilter">
+          <option value="">Tüm Kategoriler</option>
+        </select>
+        <select id="statusFilter">
+          <option value="">Tüm Durumlar</option>
+          <option value="active">Yayında</option>
+          <option value="draft">Taslak</option>
+          <option value="archived">Arşivlendi</option>
+        </select>
+        <span class="spacer"></span>
+        <span id="resultCount" class="result-count"></span>
+        <button id="newProductBtn" class="btn btn-secondary">+ Yeni Ürün</button>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+
+    <!-- Ürün Düzenleme -->
+    <section id="editView" class="view" hidden>
+      <div class="edit-header">
+        <button id="backBtn" class="btn btn-link">← Listeye Dön</button>
+        <div class="edit-header-actions">
+          <button id="deleteProductBtn" class="btn btn-danger">Ürünü Sil</button>
+          <button id="saveProductBtn" class="btn btn-primary">Kaydet</button>
+        </div>
+      </div>
+
+      <div id="formStatus" class="form-status" hidden></div>
+
+      <div class="edit-grid">
+        <div class="edit-main">
+          <h2 id="editTitle">Ürün Düzenle</h2>
+
+          <div class="field-row">
+            <label>Ürün Adı
+              <input id="f_name" type="text" />
+            </label>
+            <label class="slug-field">Slug (URL)
+              <input id="f_slug" type="text" />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>Kategori
+              <select id="f_category"></select>
+            </label>
+            <label>Alt Kategori
+              <select id="f_subcategory"></select>
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>Koleksiyon (opsiyonel)
+              <input id="f_collection" type="text" placeholder="ör. vera, nova-beyaz" />
+            </label>
+            <label>Ürün Kodu
+              <input id="f_productCode" type="text" />
+            </label>
+          </div>
+
+          <label>Kısa Açıklama
+            <textarea id="f_shortDescription" rows="2"></textarea>
+          </label>
+
+          <label>Ürün Açıklaması
+            <textarea id="f_description" rows="6"></textarea>
+          </label>
+
+          <div class="field-row">
+            <label>Fiyat (₺, boş = "iletişime geçin")
+              <input id="f_price" type="number" />
+            </label>
+            <label>Eski Fiyat (₺, opsiyonel)
+              <input id="f_oldPrice" type="number" />
+            </label>
+            <label>Kampanya Etiketi
+              <input id="f_campaignLabel" type="text" placeholder="ör. Kampanya" />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>Renkler (virgülle ayırın)
+              <input id="f_colors" type="text" placeholder="Beyaz, Ceviz" />
+            </label>
+            <label>Ölçüler
+              <input id="f_dimensions" type="text" placeholder="200 x 120 x 90 cm" />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>Malzemeler (virgülle ayırın)
+              <input id="f_materials" type="text" />
+            </label>
+            <label>Takım İçeriği (virgülle ayırın)
+              <input id="f_setContents" type="text" />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>Opsiyonel Parçalar (virgülle ayırın)
+              <input id="f_optionalParts" type="text" />
+            </label>
+            <label>Ürün Özellikleri (virgülle ayırın)
+              <input id="f_features" type="text" />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>Bakım Önerileri (virgülle ayırın)
+              <input id="f_careNotes" type="text" />
+            </label>
+            <label>Teslimat/Kurulum Bilgisi
+              <input id="f_deliveryInfo" type="text" />
+            </label>
+          </div>
+
+          <div class="field-row checkboxes">
+            <label class="checkbox-label"><input id="f_featured" type="checkbox" /> Öne çıkan ürün</label>
+            <label class="checkbox-label"><input id="f_campaign" type="checkbox" /> Kampanyalı ürün</label>
+            <label>Durum
+              <select id="f_status">
+                <option value="active">Yayında</option>
+                <option value="draft">Taslak</option>
+                <option value="archived">Arşivlendi</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>SEO Başlığı
+              <input id="f_seoTitle" type="text" />
+            </label>
+            <label>SEO Açıklaması
+              <input id="f_seoDescription" type="text" />
+            </label>
+          </div>
+        </div>
+
+        <div class="edit-side">
+          <h3>Görseller</h3>
+          <p class="hint">İlk görsel kapak fotoğrafı olarak kullanılır. Yüklenen görseller otomatik olarak optimize edilir (EXIF düzeltme, yeniden boyutlandırma, WebP).</p>
+          <div id="imageGrid" class="image-grid"></div>
+          <label class="upload-label">
+            + Görsel Ekle
+            <input id="imageUploadInput" type="file" accept="image/*" multiple hidden />
+          </label>
+          <p id="uploadStatus" class="hint"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "omur-cocuk-admin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ömür Çocuk sitesi için yerel ürün yönetim paneli (yalnızca yerel bilgisayarda çalıştırılır).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.3.0",
+    "sharp": "^0.35.4"
+  }
+}

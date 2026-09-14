@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // admin-server, ayrı bir CommonJS Node/Express aracıdır; Next.js
+    // projesinin TypeScript/ESM lint kurallarına tabi değildir.
+    "admin-server/**",
   ]),
 ]);
 
