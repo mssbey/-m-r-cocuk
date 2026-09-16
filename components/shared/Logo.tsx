@@ -32,7 +32,7 @@ export function Logo({ variant = "navy", className, priority }: LogoProps) {
         width={167}
         height={138}
         priority={priority}
-        className="h-10 w-auto sm:h-12"
+        className="brand-logo-image"
       />
     </Link>
   );

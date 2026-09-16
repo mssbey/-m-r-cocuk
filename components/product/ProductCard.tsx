@@ -23,7 +23,7 @@ export function ProductCard({
   return (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-brand-babyblue/30 bg-white transition-shadow hover:soft-shadow-lg",
+        "catalog-product-card group relative overflow-hidden rounded-2xl border border-brand-babyblue/30 bg-white transition-shadow hover:soft-shadow-lg",
         view === "grid" ? "flex flex-col" : "flex flex-row"
       )}
     >
