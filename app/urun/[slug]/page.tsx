@@ -167,6 +167,14 @@ export default async function ProductDetailPage({
             </p>
           ) : null}
 
+          <section className="product-fabric-invite">
+            <p className="shop-eyebrow">RENK / KUMAŞ SEÇİMİ</p>
+            <h2>Kumaş Seçeneklerimiz</h2>
+            <p>Ürünümüzde kullanabileceğimiz kumaş ve renk seçeneklerini inceleyin. Seçiminizin bu modele uygulanabilirliğini birlikte değerlendirelim.</p>
+            <Link href={`/kumas-renk-kartelasi?urun=${encodeURIComponent(product.slug)}`} className="flow-text-link">Kumaş Seçeneklerimizi İncele →</Link>
+            <Link href={`/ozel-uretim?urun=${encodeURIComponent(product.slug)}`} className="flow-text-link">Özel ölçü / tasarım talebi oluştur →</Link>
+          </section>
+
           {specSections.length > 0 ? (
             <div className="mt-8 flex flex-col gap-6">
               {specSections.map((section) => (

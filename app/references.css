@@ -1,0 +1,89 @@
+.woodmart-home .shop-references {
+  max-width: 950px;
+  padding-block: 72px 55px;
+}
+.shop-references .shop-section-heading h2 {
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+.shop-references .shop-section-heading > div {
+  font-size: 12px;
+}
+.reference-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 14px;
+}
+.reference-controls button {
+  color: var(--color-gray);
+  font-size: 11px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--color-baby-blue);
+  cursor: pointer;
+}
+.reference-window {
+  overflow: hidden;
+  padding-block: 32px;
+  border-block: 1px solid var(--color-baby-blue);
+}
+.reference-track {
+  width: max-content;
+  display: flex;
+  animation: reference-scroll 32s linear infinite;
+}
+.reference-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: none;
+  min-width: 950px;
+}
+.reference-group li {
+  flex: none;
+  padding-inline: 32px;
+  white-space: nowrap;
+  color: var(--color-gray);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.reference-window[data-paused="true"] .reference-track,
+.reference-window:hover .reference-track,
+.reference-window:focus-within .reference-track,
+.reference-window:active .reference-track {
+  animation-play-state: paused;
+}
+@keyframes reference-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 540px) {
+  .woodmart-home .shop-references {
+    padding-block: 52px 38px;
+  }
+  .shop-references .shop-section-heading h2 {
+    font-size: 22px;
+  }
+  .reference-window {
+    padding-block: 26px;
+  }
+  .reference-group li {
+    font-size: 21px;
+    padding-inline: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reference-track {
+    animation: none;
+  }
+  .reference-window {
+    overflow-x: auto;
+  }
+  .reference-group[aria-hidden="true"] {
+    display: none;
+  }
+  .reference-controls {
+    display: none;
+  }
+}
