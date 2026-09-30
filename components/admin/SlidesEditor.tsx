@@ -136,14 +136,17 @@ function SlideCard({
             <span>Başlık</span>
             <textarea
               name="title"
-              required
               rows={2}
               maxLength={120}
               defaultValue={slide?.title || ""}
               placeholder={"Küçük odalar.\nBüyük hayaller."}
             />
           </label>
-          <p className="admin-help">Enter ile alt satıra geçebilirsiniz.</p>
+          <p className="admin-help">
+            Enter ile alt satıra geçebilirsiniz. Yazı alanlarının hepsi
+            isteğe bağlıdır; boş bırakılan yazı sitede gösterilmez. Hepsi boşsa
+            slayt yalnızca görselden oluşur.
+          </p>
           <label>
             <span>Açıklama</span>
             <textarea
@@ -157,7 +160,6 @@ function SlideCard({
             <span>Buton yazısı</span>
             <input
               name="name"
-              required
               maxLength={80}
               defaultValue={slide?.name || ""}
               placeholder="Örn. Bebek odalarını keşfet"

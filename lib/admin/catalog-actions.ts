@@ -373,11 +373,11 @@ export function applyCatalogAction(catalog: Catalog, input: Input) {
     const value: HeroSlide = {
       id: old?.id || randomUUID(),
       eyebrow: text(data.eyebrow, 80),
-      title: text(data.title, 120, true),
+      title: text(data.title, 120),
       text: text(data.text, 300),
       image: src,
       href,
-      name: text(data.name, 80, true),
+      name: text(data.name, 80),
       tag: text(data.tag, 40),
     };
     if (old) slides[slides.indexOf(old)] = value;

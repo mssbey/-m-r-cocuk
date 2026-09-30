@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useProductCarousel } from "@/hooks/useProductCarousel";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,6 +22,7 @@ import type { HeroSlide } from "@/lib/admin/catalog-types";
 // Admin panelindeki "Ana Sayfa Slider" ekranından yönetilir.
 const slides = heroSlides as HeroSlide[];
 const tabs = ["Öne çıkanlar", "Yeni ürünler", "Kampanyalar"];
+const SLIDE_INTERVAL = 5000;
 
 function Heading({
   eyebrow,
@@ -45,8 +46,23 @@ function Heading({
 export function WoodmartHome() {
   const [slide, setSlide] = useState(0);
   const [tab, setTab] = useState(0);
+  const [sliderPaused, setSliderPaused] = useState(false);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   const current = slides[slide];
+  const hasCopy = Boolean(
+    current.eyebrow || current.title || current.text || current.name,
+  );
+  // Slider kendiliğinden ilerler; fareyle üzerine gelince veya odaklanınca
+  // durur. Her slayt değişiminde süre baştan başlar.
+  useEffect(() => {
+    if (sliderPaused || slides.length < 2) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const timer = window.setTimeout(
+      () => setSlide((s) => (s + 1) % slides.length),
+      SLIDE_INTERVAL,
+    );
+    return () => window.clearTimeout(timer);
+  }, [slide, sliderPaused]);
   function changeTab(index: number) {
     setTab(index);
     reset();
@@ -84,6 +100,13 @@ export function WoodmartHome() {
             role="region"
             aria-label="Ömür Çocuk koleksiyonları"
             aria-roledescription="slayt gösterisi"
+            onMouseEnter={() => setSliderPaused(true)}
+            onMouseLeave={() => setSliderPaused(false)}
+            onFocus={() => setSliderPaused(true)}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget))
+                setSliderPaused(false);
+            }}
             onTouchStart={(e) => {
               touchStart.current = {
                 x: e.touches[0].clientX,
@@ -102,32 +125,49 @@ export function WoodmartHome() {
                 );
             }}
           >
-            <div className="shop-hero-inner" key={slide} aria-live="polite">
+            <div
+              className="shop-hero-inner"
+              key={slide}
+              aria-live={sliderPaused ? "polite" : "off"}
+            >
               <Link href={current.href} className="shop-hero-picture">
                 <Image
                   src={current.image}
-                  alt={current.name}
+                  alt={
+                    current.name ||
+                    current.title.replace(/\n/g, " ") ||
+                    current.tag ||
+                    "Ömür Çocuk koleksiyonu"
+                  }
                   fill
                   priority={slide === 0}
                   sizes="(min-width: 1232px) 972px, (min-width: 1051px) calc(100vw - 260px), (min-width: 801px) calc(100vw - 210px), calc(100vw - 30px)"
                   className="object-contain"
                 />
               </Link>
-              <div className="shop-hero-copy">
-                <p>{current.eyebrow}</p>
-                <h1>
-                  {current.title.split("\n").map((line, i) => (
-                    <span key={i}>
-                      {i > 0 && <br />}
-                      {line}
-                    </span>
-                  ))}
-                </h1>
-                <div className="shop-hero-description">{current.text}</div>
-                <Link className="shop-hero-link" href={current.href}>
-                  {current.name} <span aria-hidden="true">›</span>
-                </Link>
-              </div>
+              {hasCopy && (
+                <div className="shop-hero-copy">
+                  {current.eyebrow && <p>{current.eyebrow}</p>}
+                  {current.title && (
+                    <h1>
+                      {current.title.split("\n").map((line, i) => (
+                        <span key={i}>
+                          {i > 0 && <br />}
+                          {line}
+                        </span>
+                      ))}
+                    </h1>
+                  )}
+                  {current.text && (
+                    <div className="shop-hero-description">{current.text}</div>
+                  )}
+                  {current.name && (
+                    <Link className="shop-hero-link" href={current.href}>
+                      {current.name} <span aria-hidden="true">›</span>
+                    </Link>
+                  )}
+                </div>
+              )}
             </div>
             <button
               className="shop-slide-arrow shop-slide-prev"
@@ -149,7 +189,9 @@ export function WoodmartHome() {
               {slides.map((s, i) => (
                 <button
                   key={s.id}
-                  aria-label={`${i + 1}. koleksiyon: ${s.tag}`}
+                  aria-label={
+                    s.tag ? `${i + 1}. koleksiyon: ${s.tag}` : `${i + 1}. slayt`
+                  }
                   aria-pressed={i === slide}
                   onClick={() => setSlide(i)}
                 />

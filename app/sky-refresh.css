@@ -18,6 +18,7 @@
 .shop-slider { border-radius: 22px; border: 1px solid var(--color-sky-light); background: var(--color-sky-light); }
 .shop-hero-picture { background: #fff; }
 .shop-hero-copy { padding-bottom: 18px; }
+.shop-slider:not(:has(.shop-hero-copy)) .shop-slide-dots { padding-top: 12px; }
 .shop-hero-link { font-weight: 600; }
 .shop-hero-link > span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--color-baby-blue); }
 .shop-slide-dots button[aria-pressed="true"]:after { background: var(--color-baby-blue); border-color: var(--color-navy); }
