@@ -30,8 +30,8 @@ export function ProductCard({
       <Link
         href={`/urun/${product.slug}`}
         className={cn(
-          "relative block overflow-hidden bg-brand-sky",
-          view === "grid" ? "aspect-[4/5] w-full" : "aspect-square w-32 flex-shrink-0 sm:w-48"
+          "catalog-product-image relative block overflow-hidden bg-brand-sky",
+          view === "grid" ? "aspect-[4/3] w-full" : "aspect-square w-32 flex-shrink-0 sm:w-48"
         )}
       >
         {product.coverImage ? (
@@ -50,7 +50,7 @@ export function ProductCard({
           <PlaceholderImage className="absolute inset-0" />
         )}
         {product.campaignLabel ? (
-          <span className="absolute left-3 top-3 rounded-full bg-brand-navy px-3 py-1 text-xs font-semibold text-white">
+          <span className="absolute left-3 top-3 max-w-[65%] rounded-full bg-brand-babyblue px-3 py-1 text-xs font-semibold text-brand-navy">
             {product.campaignLabel}
           </span>
         ) : null}
@@ -67,8 +67,8 @@ export function ProductCard({
 
       <div
         className={cn(
-          "flex flex-1 flex-col gap-2 p-4",
-          view === "list" && "justify-center sm:p-5"
+          "flex min-w-0 flex-1 flex-col gap-2 p-4",
+          view === "list" && "justify-center pr-12 sm:p-5 sm:pr-14"
         )}
       >
         {category ? (
@@ -93,7 +93,7 @@ export function ProductCard({
           <div className="mt-3 flex gap-2">
             <Link
               href={`/urun/${product.slug}`}
-              className="flex-1 rounded-full bg-brand-navy px-3 py-2 text-center text-xs font-medium text-white transition-colors hover:bg-brand-navy/90 sm:flex-initial sm:px-4"
+              className="flex-1 rounded-full bg-brand-babyblue px-3 py-2 text-center text-xs font-semibold text-brand-navy transition-colors hover:bg-brand-babyblue/75 sm:flex-initial sm:px-4"
             >
               Ürünü İncele
             </Link>

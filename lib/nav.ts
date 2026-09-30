@@ -52,8 +52,9 @@ export const primaryNav: NavItem[] = [
         {
           title: "Diğer",
           links: [
-            { label: "Bebek Arabaları", href: "/bebek-arabalari" },
-            { label: "Kampanyalı Ürünler", href: "/kampanyali-urunler" },
+            ...categories
+              .filter((category) => !["bebek-odalari", "genc-odalari", "montessori-odalari", "dolap-gardrop", "sifonyer-komodin"].includes(category.slug))
+              .map((category) => ({ label: category.name, href: `/${category.slug}` })),
           ],
         },
       ],

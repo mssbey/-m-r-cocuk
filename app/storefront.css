@@ -826,8 +826,8 @@ footer .brand-logo-image {
   height: 80px;
 }
 .catalog-product-card {
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  border-radius: 22px;
+  box-shadow: 0 4px 20px #24344706;
 }
 .catalog-product-card h3 {
   font-family: var(--font-sans);
@@ -835,7 +835,7 @@ footer .brand-logo-image {
   font-weight: 600;
 }
 .catalog-product-card a[class*="rounded-full"] {
-  border-radius: 0;
+  border-radius: 12px;
 }
 @media (max-width: 1100px) {
   .shop-mainbar {

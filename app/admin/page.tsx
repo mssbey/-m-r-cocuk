@@ -16,14 +16,18 @@ export default function AdminDashboardPage() {
 
   useEffect(() => {
     Promise.all([
-      fetch("/api/admin/products/").then((r) => r.json()),
-      fetch("/api/admin/categories/").then((r) => r.json()),
+      ...["/api/admin/products/", "/api/admin/categories/"].map(async (url) => {
+        const response = await fetch(url, { cache: "no-store" });
+        const body = await response.json();
+        if (!response.ok) throw new Error(body.error || "Veriler yüklenemedi.");
+        return body;
+      }),
     ])
       .then(([p, c]) => {
         setProducts(p);
         setCategories(c);
       })
-      .catch(() => setError("Ürünler yüklenemedi."));
+      .catch((err) => setError(err instanceof Error ? err.message : "Ürünler yüklenemedi."));
   }, []);
 
   const filtered = useMemo(() => {
@@ -48,6 +52,9 @@ export default function AdminDashboardPage() {
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-semibold text-brand-navy">Ürün Yönetimi</h1>
         <div className="flex gap-2">
+          <Link href="/admin/kategoriler" className="rounded-md border border-brand-babyblue px-4 py-2 text-sm font-medium text-brand-navy">
+            Kategoriler
+          </Link>
           <Link
             href="/admin/urun/yeni/"
             className="rounded-md bg-brand-navy px-4 py-2 text-sm font-medium text-white"

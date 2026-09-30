@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { deleteFile, getFileSha, readJsonFile, writeJsonFile } from "@/lib/admin/github";
 import { EDITABLE_FIELDS, PRODUCTS_JSON_PATH, nowIso } from "@/lib/admin/products";
-import type { Product } from "@/lib/types";
+import type { Category, Product } from "@/lib/types";
+import { CATEGORIES_JSON_PATH } from "@/lib/admin/categories";
 
 export const runtime = "nodejs";
 
@@ -30,6 +31,11 @@ export async function PUT(req: Request, { params }: Params) {
       // @ts-expect-error - dinamik alan ataması, EDITABLE_FIELDS Product anahtarlarıyla sınırlı
       product[field] = body[field];
     }
+  }
+  const { data: categories } = await readJsonFile<Category[]>(CATEGORIES_JSON_PATH);
+  const category = categories.find((item) => item.slug === product.category);
+  if (!category || (product.subcategory && !category.subcategories.some((sub) => sub.slug === product.subcategory))) {
+    return NextResponse.json({ error: "Geçersiz kategori veya alt kategori." }, { status: 400 });
   }
   product.updatedAt = nowIso();
   products[idx] = product;

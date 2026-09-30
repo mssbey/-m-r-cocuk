@@ -16,9 +16,18 @@ export default function NewProductPage() {
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    fetch("/api/admin/categories/")
-      .then((r) => r.json())
-      .then(setCategories);
+    fetch("/api/admin/categories/", { cache: "no-store" })
+      .then(async (response) => {
+        const body = await response.json();
+        if (!response.ok) throw new Error(body.error || "Kategoriler yüklenemedi.");
+        return body as Category[];
+      })
+      .then((items) => {
+        setCategories(items);
+        const requestedCategory = new URLSearchParams(window.location.search).get("category");
+        if (items.some((item) => item.slug === requestedCategory)) setCategory(requestedCategory!);
+      })
+      .catch((err) => setError(err instanceof Error ? err.message : "Kategoriler yüklenemedi."));
   }, []);
 
   const selectedCategory = categories.find((c) => c.slug === category);
@@ -39,6 +48,8 @@ export default function NewProductPage() {
         return;
       }
       router.push(`/admin/urun/${body.slug}/`);
+    } catch {
+      setError("Ürün oluşturulamadı. Bağlantınızı kontrol edip tekrar deneyin.");
     } finally {
       setSaving(false);
     }
@@ -50,6 +61,7 @@ export default function NewProductPage() {
         ← Ürün listesi
       </Link>
       <h1 className="mb-6 mt-2 text-2xl font-semibold text-brand-navy">Yeni Ürün</h1>
+      <p className="mb-5 text-sm text-brand-gray">Aradığınız kategori yok mu? <Link href="/admin/kategoriler" className="text-brand-navy underline">Kategori ekleyin</Link>.</p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

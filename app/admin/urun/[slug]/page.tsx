@@ -34,7 +34,11 @@ export default function EditProductPage() {
 
   useEffect(() => {
     load();
-    fetch("/api/admin/categories/").then((r) => r.json()).then(setCategories);
+    fetch("/api/admin/categories/", { cache: "no-store" }).then(async (response) => {
+      const body = await response.json();
+      if (!response.ok) throw new Error(body.error || "Kategoriler yüklenemedi.");
+      return body;
+    }).then(setCategories).catch((err) => setError(err instanceof Error ? err.message : "Kategoriler yüklenemedi."));
   }, [load]);
 
   function set<K extends keyof Product>(key: K, value: Product[K]) {
@@ -193,7 +197,7 @@ export default function EditProductPage() {
           <Field label="Kategori">
             <select
               value={product.category}
-              onChange={(e) => set("category", e.target.value as Product["category"])}
+              onChange={(e) => setProduct((current) => current ? { ...current, category: e.target.value, subcategory: null } : current)}
               className={inputClass}
             >
               {categories.map((c) => (

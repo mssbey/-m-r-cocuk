@@ -2,12 +2,13 @@
 @import "./storefront.css";
 @import "./customer-flow.css";
 @import "./references.css";
+@import "./sky-refresh.css";
 
 :root {
   --color-cream: #fff8eb;
   --color-off-white: #fffcf6;
-  --color-sky-light: #d9eef5;
-  --color-baby-blue: #a9d6e5;
+  --color-sky-light: #e7f5fb;
+  --color-baby-blue: #87ceeb;
   --color-navy: #243447;
   --color-gray: #667085;
   --color-sand: #d8c3a5;

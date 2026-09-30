@@ -15,7 +15,6 @@ import { FactoryInvite } from "@/components/shared/FactoryInvite";
 import { ReferencesSection } from "@/components/home/ReferencesSection";
 import { CategoryLinks } from "@/components/layout/CategoryLinks";
 import { collectionGroups } from "@/lib/data/collection-groups";
-import { CategoryIcon } from "@/components/shared/CategoryIcon";
 
 const slides = [
   {
@@ -200,29 +199,35 @@ export function WoodmartHome() {
             title="ÖNE ÇIKAN KATEGORİLER"
             text="Bebeklikten gençliğe, her yaşa ve her hayale bir oda."
           />
-          <div className="shop-category-grid">
+          <div className="room-discovery-grid">
             {categories
               .filter((c) => c.coverImage)
               .slice(0, 5)
               .map((c) => (
                 <Link
-                  className="shop-category-card"
+                  className="room-discovery-card"
                   href={`/${c.slug}`}
                   key={c.slug}
                 >
-                  <span className="shop-category-icon">
-                    <CategoryIcon slug={c.slug} />
-                  </span>
-                  <div>
-                    <h3>{c.name}</h3>
-                    <p>{c.shortDescription}</p>
-                    <span>
+                  <div className="room-discovery-image">
+                    <Image
+                      src={c.coverImage!}
+                      alt={c.name}
+                      fill
+                      sizes="(min-width: 801px) 40vw, (min-width: 541px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                    <span className="room-discovery-count">
                       {active.filter((p) => p.category === c.slug).length} ürün
                     </span>
                   </div>
-                  <span className="shop-category-chevron" aria-hidden="true">
-                    ›
-                  </span>
+                  <div className="room-discovery-copy">
+                    <h3>{c.name}</h3>
+                    <p>{c.shortDescription}</p>
+                    <span className="room-discovery-link">
+                      Koleksiyonu keşfet <span aria-hidden="true">↗</span>
+                    </span>
+                  </div>
                 </Link>
               ))}
           </div>
@@ -323,15 +328,19 @@ export function WoodmartHome() {
                 {p.campaignLabel && (
                   <span className="shop-product-badge">{p.campaignLabel}</span>
                 )}
-                <Link className="shop-quick-link" href={`/urun/${p.slug}`}>
-                  ÜRÜNÜ İNCELE
-                </Link>
               </div>
-              <Link href={`/urun/${p.slug}`}>
-                <h3>{p.name}</h3>
-              </Link>
-              <p>{categories.find((c) => c.slug === p.category)?.name}</p>
-              <PriceTag price={p.price} oldPrice={p.oldPrice} size="sm" />
+              <div className="shop-product-content">
+                <p className="shop-product-category">{categories.find((c) => c.slug === p.category)?.name}</p>
+                <Link href={`/urun/${p.slug}`}>
+                  <h3>{p.name}</h3>
+                </Link>
+                <div className="shop-product-bottom">
+                  <PriceTag price={p.price} oldPrice={p.oldPrice} size="sm" />
+                  <Link className="shop-product-detail" href={`/urun/${p.slug}`}>
+                    Ürünü incele <span aria-hidden="true">↗</span>
+                  </Link>
+                </div>
+              </div>
             </article>
           ))}
         </div>

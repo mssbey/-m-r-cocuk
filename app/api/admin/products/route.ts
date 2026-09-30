@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { readJsonFile, writeJsonFile } from "@/lib/admin/github";
 import { PRODUCTS_JSON_PATH, EMPTY_PRODUCT_DEFAULTS, nextProductCode, nowIso, slugify, uniqueSlug } from "@/lib/admin/products";
-import categories from "@/lib/data/categories.json";
-import type { Product } from "@/lib/types";
+import { CATEGORIES_JSON_PATH } from "@/lib/admin/categories";
+import type { Category, Product } from "@/lib/types";
 
 export const runtime = "nodejs";
 
@@ -17,9 +17,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Ürün adı ve kategori zorunludur." }, { status: 400 });
   }
 
+  const { data: categories } = await readJsonFile<Category[]>(CATEGORIES_JSON_PATH);
   const category = categories.find((c) => c.slug === body.category);
   if (!category) {
     return NextResponse.json({ error: "Geçersiz kategori." }, { status: 400 });
+  }
+  if (body.subcategory && !category.subcategories.some((sub) => sub.slug === body.subcategory)) {
+    return NextResponse.json({ error: "Geçersiz alt kategori." }, { status: 400 });
   }
 
   const { data: products, sha } = await readJsonFile<Product[]>(PRODUCTS_JSON_PATH);

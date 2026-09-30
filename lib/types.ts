@@ -1,13 +1,7 @@
 /** Ürün ve katalog veri modelleri. */
 
-export type CategorySlug =
-  | "bebek-odalari"
-  | "genc-odalari"
-  | "montessori-odalari"
-  | "dolap-gardrop"
-  | "sifonyer-komodin"
-  | "bebek-arabalari"
-  | "kampanyali-urunler";
+/** Kategoriler yönetim panelinden eklenebilir; geçerlilik kategori verisinden kontrol edilir. */
+export type CategorySlug = string;
 
 export type Category = {
   slug: CategorySlug;

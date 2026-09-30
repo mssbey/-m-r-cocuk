@@ -38,6 +38,7 @@ export class GitHubApiError extends Error {
 
 async function githubFetch(url: string, init?: RequestInit) {
   const res = await fetch(url, {
+    cache: "no-store",
     ...init,
     headers: { ...apiHeaders(), ...(init?.headers || {}) },
   });
