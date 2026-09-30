@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { PlaceholderImage } from "@/components/shared/PlaceholderImage";
 import { DecorativeDivider } from "@/components/shared/DecorativeDivider";
 import { FactoryInvite } from "@/components/shared/FactoryInvite";
+import { CompanyGallery } from "@/components/shared/CompanyGallery";
 
 export const metadata: Metadata = buildMetadata({
   title: "Biz Kimiz",
@@ -63,6 +64,7 @@ export default function AboutPage() {
 
       <div className="my-14">
         <FactoryInvite />
+        <CompanyGallery category="delivery" />
       </div>
       <div className="my-14">
         <DecorativeDivider />

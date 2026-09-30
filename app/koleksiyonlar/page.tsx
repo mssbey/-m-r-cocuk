@@ -20,6 +20,7 @@ export default function CollectionsPage() {
           <Link href={`/koleksiyonlar/${group.slug}`} key={group.slug}>
             <div>
               <h2>{group.name}</h2>
+              {group.subtitle && <p>{group.subtitle}</p>}
               <p>{group.description}</p>
             </div>
             <span aria-hidden="true">→</span>

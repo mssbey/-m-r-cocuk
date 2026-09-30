@@ -16,7 +16,7 @@ const DEFAULT_FILTERS: CatalogFilterValue = {
   category: "all",
   subcategory: "all",
   color: "all",
-  sort: "newest",
+  sort: "recommended",
 };
 
 export function ProductCatalog({

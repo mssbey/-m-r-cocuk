@@ -98,7 +98,7 @@ export function WoodmartHome() {
       ? active.filter((p) => p.campaign)
       : tab === 1
         ? [...active].sort((a, b) => b.createdAt.localeCompare(a.createdAt))
-        : [...active].sort((a, b) => Number(b.featured) - Number(a.featured))
+        : active
   ).slice(0, 8);
   const {
     railRef,

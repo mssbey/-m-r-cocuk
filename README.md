@@ -521,3 +521,7 @@ Bunların dışındaki tüm site altyapısı (menü, arama, filtreleme, ürün
 kartları/detayları, favoriler, WhatsApp bağlantıları, mobil menü, SEO
 metadata/JSON-LD, sitemap/robots, erişilebilirlik, responsive tasarım)
 tamamlanmış ve test edilmiş durumdadır.
+
+## Güncel yönetim paneli
+
+`/admin` paneli, Zenn Bedding aktarım rehberine göre Ömür Çocuk markasına uyarlanmıştır. Ürünler, kategoriler/koleksiyonlar ve fabrika/teslimat galerisi aynı menüden yönetilir. Kurulum, veri saklama farkları ve kabul kontrolleri için [panel aktarım notlarına](docs/admin-panel-transfer.md) bakın. Tarayıcı kontrolleri `npm run test:admin` ile geçici test verileri üzerinde çalıştırılır.

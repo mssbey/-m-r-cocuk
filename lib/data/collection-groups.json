@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "modern-koleksiyon",
+    "name": "Modern Koleksiyon",
+    "description": "Sade çizgilerle bir araya gelen oda tasarımları.",
+    "families": [
+      "vera",
+      "nova-beyaz"
+    ],
+    "subtitle": "",
+    "image": "/images/products/genc-odalari/nova-full-oda-takimi-beyaz-01.webp"
+  },
+  {
+    "slug": "luxury-koleksiyon",
+    "name": "Luxury Koleksiyon",
+    "description": "Detaylarıyla öne çıkan oda takımlarından bir seçki.",
+    "families": [
+      "alya-beyaz",
+      "orion-aytasi"
+    ],
+    "subtitle": "",
+    "image": "/images/products/genc-odalari/alya-full-oda-takimi-beyaz-01.webp"
+  },
+  {
+    "slug": "bohem-koleksiyon",
+    "name": "Bohem Koleksiyon",
+    "description": "Hayalinizdeki bohem yaşam alanını birlikte tasarlayalım.",
+    "families": [],
+    "subtitle": "",
+    "image": "/logo/omur-cocuk-logo-navy.png"
+  },
+  {
+    "slug": "rustic-koleksiyon",
+    "name": "Rustic Koleksiyon",
+    "description": "Doğal bir görünüm için ölçü, renk ve tasarımı birlikte değerlendirelim.",
+    "families": [],
+    "subtitle": "",
+    "image": "/logo/omur-cocuk-logo-navy.png"
+  },
+  {
+    "slug": "kids-collection",
+    "name": "Kids Collection",
+    "description": "Miniklerin dünyası için beşik ve Montessori tasarımları.",
+    "families": [
+      "grow-buyuyen-besik",
+      "bloom"
+    ],
+    "subtitle": "",
+    "image": "/images/products/montessori-odalari/bloom-montessori-yatak-01.webp"
+  },
+  {
+    "slug": "yeni-koleksiyonlar",
+    "name": "Yeni Koleksiyonlar",
+    "description": "Kataloğumuza en son eklenen tasarımları keşfedin.",
+    "families": [],
+    "subtitle": "",
+    "image": "/logo/omur-cocuk-logo-navy.png"
+  }
+]

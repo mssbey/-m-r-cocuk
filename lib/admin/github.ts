@@ -12,7 +12,7 @@ const OWNER = process.env.GITHUB_OWNER || "mssbey";
 const REPO = process.env.GITHUB_REPO || "-m-r-cocuk";
 const BRANCH = process.env.GITHUB_BRANCH || "main";
 
-function apiHeaders() {
+export function apiHeaders() {
   const token = process.env.GITHUB_TOKEN;
   if (!token) {
     throw new Error("GITHUB_TOKEN ortam değişkeni tanımlı değil.");
@@ -36,7 +36,7 @@ export class GitHubApiError extends Error {
   }
 }
 
-async function githubFetch(url: string, init?: RequestInit) {
+export async function githubFetch(url: string, init?: RequestInit) {
   const res = await fetch(url, {
     cache: "no-store",
     ...init,

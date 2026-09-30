@@ -6,7 +6,7 @@ export type CatalogFilterValue = {
   category: CategorySlug | "all";
   subcategory: string | "all";
   color: string | "all";
-  sort: "newest" | "price-asc" | "price-desc";
+  sort: "recommended" | "newest" | "price-asc" | "price-desc";
 };
 
 type ProductFiltersProps = {
@@ -100,6 +100,7 @@ export function ProductFilters({
         value={value.sort}
         onChange={(v) => onChange({ sort: v as CatalogFilterValue["sort"] })}
         options={[
+          { value: "recommended", label: "Önerilen" },
           { value: "newest", label: "Yeniden Eskiye" },
           ...(hasPriceData
             ? [

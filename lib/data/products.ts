@@ -52,7 +52,7 @@ export type ProductSearchFilters = {
   category?: CategorySlug;
   subcategory?: string;
   color?: string;
-  sort?: "newest" | "price-asc" | "price-desc";
+  sort?: "recommended" | "newest" | "price-asc" | "price-desc";
 };
 
 export function searchProducts(filters: ProductSearchFilters): Product[] {
@@ -89,10 +89,11 @@ export function searchProducts(filters: ProductSearchFilters): Product[] {
       results = [...results].sort((a, b) => (b.price ?? -Infinity) - (a.price ?? -Infinity));
       break;
     case "newest":
-    default:
       results = [...results].sort(
         (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
       );
+      break;
+    default:
       break;
   }
 

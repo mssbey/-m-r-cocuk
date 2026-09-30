@@ -56,3 +56,6 @@ admin-server/node_modules/
 admin-server/*.log
 
 .vercel
+
+# local admin data
+.admin-local/

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CompanyGallery } from "./CompanyGallery";
 import { factory } from "@/lib/data/factory";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -9,6 +10,7 @@ export function FactoryInvite() {
         <p className="shop-eyebrow">DOĞRUDAN ÜRETİCİNİZLE TANIŞIN</p>
         <h2>{factory.title}</h2>
         <p>{factory.description}</p>
+        <CompanyGallery category="factory" />
         <div className="flow-actions">
           <Link className="shop-button" href="/fabrikamiz">
             Fabrikamızı Ziyaret Edin

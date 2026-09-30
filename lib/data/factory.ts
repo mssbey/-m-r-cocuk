@@ -1,3 +1,5 @@
+import gallery from "./gallery.json";
+import { sortGallery, type GalleryItem } from "@/lib/admin/catalog-types";
 export const factory = {
   title: "Üretimi Yerinde Görün, Birlikte Tasarlayalım.",
   description:
@@ -5,5 +7,5 @@ export const factory = {
   address: null as string | null,
   mapsUrl: null as string | null,
   // Only approved photographs of the actual facility belong here.
-  photos: [] as { src: string; alt: string }[],
+  photos: sortGallery(gallery as GalleryItem[]).filter(x=>x.category==="factory").map(x=>({src:x.src,alt:x.caption})),
 };

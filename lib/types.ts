@@ -38,6 +38,10 @@ export type Product = {
   category: CategorySlug;
   subcategory: string | null;
   collection: string | null;
+  /** Editorial collection; the existing product-family relationship is preserved. */
+  collectionGroup?: string | null;
+  isNew?: boolean;
+  fabrics?: string[];
   shortDescription: string;
   description: string;
   productCode: string;
