@@ -12,6 +12,7 @@ import {
   type Catalog,
   type AdminCollection,
   type GalleryItem,
+  type HeroSlide,
 } from "./catalog-types";
 import { CatalogError } from "./catalog-store";
 import { validUploadReceipt } from "./upload-receipt";
@@ -336,6 +337,51 @@ export function applyCatalogAction(catalog: Catalog, input: Input) {
     };
     if (old) catalog.gallery[catalog.gallery.indexOf(old)] = value;
     else catalog.gallery.push(value);
+    return;
+  }
+  if (["saveSlide", "deleteSlide", "moveSlide"].includes(String(action))) {
+    const slides = catalog.slides;
+    const old = slides.find((x) => x.id === input.id);
+    if (input.id && !old) fail("Slayt bulunamadı. Sayfayı yenileyin.");
+    if (action === "deleteSlide") {
+      if (!old) fail("Slayt bulunamadı.");
+      if (slides.length <= 1) fail("Slider'da en az bir slayt kalmalıdır.");
+      slides.splice(slides.indexOf(old!), 1);
+      return;
+    }
+    if (action === "moveSlide") {
+      if (!old || (input.direction !== -1 && input.direction !== 1))
+        fail("Geçersiz sıralama.");
+      const a = slides.indexOf(old!),
+        b = a + (input.direction as number);
+      if (b >= 0 && b < slides.length)
+        [slides[a], slides[b]] = [slides[b], slides[a]];
+      return;
+    }
+    const data = input.data as Input;
+    if (!data) fail("Geçersiz form.");
+    const src = text(data.image, 500, true);
+    if (
+      src !== old?.image &&
+      (!/^\/images\/uploads\/[a-f0-9-]+\.webp$/.test(src) ||
+        !validUploadReceipt(src, "slide", data.uploadToken))
+    )
+      fail("Bir görsel seçin.");
+    const href = text(data.href, 300, true);
+    if (!/^\/(?!\/)/.test(href))
+      fail("Bağlantı site içi bir adres olmalı (örn. /bebek-odalari).");
+    const value: HeroSlide = {
+      id: old?.id || randomUUID(),
+      eyebrow: text(data.eyebrow, 80),
+      title: text(data.title, 120, true),
+      text: text(data.text, 300),
+      image: src,
+      href,
+      name: text(data.name, 80, true),
+      tag: text(data.tag, 40),
+    };
+    if (old) slides[slides.indexOf(old)] = value;
+    else slides.push(value);
     return;
   }
   fail("Geçersiz işlem.");

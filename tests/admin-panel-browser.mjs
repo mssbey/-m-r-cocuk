@@ -17,6 +17,7 @@ const initial = {
   categories: await read("lib/data/categories.json"),
   collections: await read("lib/data/collection-groups.json"),
   gallery: [],
+  slides: await read("lib/data/hero-slides.json"),
   revision: randomUUID(),
 };
 await fs.writeFile(path.join(temp, "catalog.json"), JSON.stringify(initial));

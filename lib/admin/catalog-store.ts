@@ -8,6 +8,7 @@ export const catalogPaths = {
   categories: "lib/data/categories.json",
   collections: "lib/data/collection-groups.json",
   gallery: "lib/data/gallery.json",
+  slides: "lib/data/hero-slides.json",
 } as const;
 const base = () =>
   `https://api.github.com/repos/${process.env.GITHUB_OWNER || "mssbey"}/${process.env.GITHUB_REPO || "-m-r-cocuk"}`;

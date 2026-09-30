@@ -15,11 +15,23 @@ export type GalleryItem = {
   src: string;
   createdAt: string;
 };
+export type HeroSlide = {
+  id: string;
+  eyebrow: string;
+  /** Satır sonları ("\n") başlıkta alt satıra geçer. */
+  title: string;
+  text: string;
+  image: string;
+  href: string;
+  name: string;
+  tag: string;
+};
 export type Catalog = {
   products: Product[];
   categories: Category[];
   collections: AdminCollection[];
   gallery: GalleryItem[];
+  slides: HeroSlide[];
   revision: string;
 };
 export function collectionOf(product: Product, collections: AdminCollection[]) {

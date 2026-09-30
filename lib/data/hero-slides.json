@@ -1,0 +1,32 @@
+[
+  {
+    "id": "montessori",
+    "eyebrow": "ÖMÜR ÇOCUK KOLEKSİYONU",
+    "title": "Küçük odalar.\nBüyük hayaller.",
+    "text": "İlk uykusundan en güzel hayallerine, birlikte büyüyen yaşam alanları.",
+    "image": "/images/products/montessori-odalari/vera-montessori-catili-yatak-01.webp",
+    "href": "/montessori-odalari",
+    "name": "Montessori odalarını keşfet",
+    "tag": "MONTESSORİ"
+  },
+  {
+    "id": "bebek",
+    "eyebrow": "HAYATIN EN GÜZEL BAŞLANGICI",
+    "title": "İlk odası.\nİlk dünyası.",
+    "text": "Bebeğinizin odasına sıcaklık katan, her detayı özenle seçilmiş mobilyalar.",
+    "image": "/images/products/bebek-odalari/vera-bebek-odasi-takimi-beyaz-01.webp",
+    "href": "/bebek-odalari",
+    "name": "Bebek odalarını keşfet",
+    "tag": "BEBEK ODALARI"
+  },
+  {
+    "id": "genc",
+    "eyebrow": "KENDİ DÜNYASINI KURSUN",
+    "title": "Onun tarzı.\nOnun odası.",
+    "text": "Çalışmaya, dinlenmeye ve hayal kurmaya yer açan genç odası koleksiyonu.",
+    "image": "/images/products/genc-odalari/vera-full-oda-takimi-beyaz-01.webp",
+    "href": "/genc-odalari",
+    "name": "Genç odalarını keşfet",
+    "tag": "GENÇ ODALARI"
+  }
+]

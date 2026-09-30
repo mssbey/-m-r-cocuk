@@ -15,53 +15,11 @@ import { FactoryInvite } from "@/components/shared/FactoryInvite";
 import { ReferencesSection } from "@/components/home/ReferencesSection";
 import { CategoryLinks } from "@/components/layout/CategoryLinks";
 import { collectionGroups } from "@/lib/data/collection-groups";
+import heroSlides from "@/lib/data/hero-slides.json";
+import type { HeroSlide } from "@/lib/admin/catalog-types";
 
-const slides = [
-  {
-    eyebrow: "ÖMÜR ÇOCUK KOLEKSİYONU",
-    title: (
-      <>
-        Küçük odalar.
-        <br /> Büyük hayaller.
-      </>
-    ),
-    text: "İlk uykusundan en güzel hayallerine, birlikte büyüyen yaşam alanları.",
-    image:
-      "/images/products/montessori-odalari/vera-montessori-catili-yatak-01.webp",
-    href: "/montessori-odalari",
-    name: "Montessori odalarını keşfet",
-    tag: "MONTESSORİ",
-  },
-  {
-    eyebrow: "HAYATIN EN GÜZEL BAŞLANGICI",
-    title: (
-      <>
-        İlk odası.
-        <br /> İlk dünyası.
-      </>
-    ),
-    text: "Bebeğinizin odasına sıcaklık katan, her detayı özenle seçilmiş mobilyalar.",
-    image:
-      "/images/products/bebek-odalari/vera-bebek-odasi-takimi-beyaz-01.webp",
-    href: "/bebek-odalari",
-    name: "Bebek odalarını keşfet",
-    tag: "BEBEK ODALARI",
-  },
-  {
-    eyebrow: "KENDİ DÜNYASINI KURSUN",
-    title: (
-      <>
-        Onun tarzı.
-        <br /> Onun odası.
-      </>
-    ),
-    text: "Çalışmaya, dinlenmeye ve hayal kurmaya yer açan genç odası koleksiyonu.",
-    image: "/images/products/genc-odalari/vera-full-oda-takimi-beyaz-01.webp",
-    href: "/genc-odalari",
-    name: "Genç odalarını keşfet",
-    tag: "GENÇ ODALARI",
-  },
-];
+// Admin panelindeki "Ana Sayfa Slider" ekranından yönetilir.
+const slides = heroSlides as HeroSlide[];
 const tabs = ["Öne çıkanlar", "Yeni ürünler", "Kampanyalar"];
 
 function Heading({
@@ -156,7 +114,14 @@ export function WoodmartHome() {
               </Link>
               <div className="shop-hero-copy">
                 <p>{current.eyebrow}</p>
-                <h1>{current.title}</h1>
+                <h1>
+                  {current.title.split("\n").map((line, i) => (
+                    <span key={i}>
+                      {i > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
+                </h1>
                 <div className="shop-hero-description">{current.text}</div>
                 <Link className="shop-hero-link" href={current.href}>
                   {current.name} <span aria-hidden="true">›</span>
@@ -182,7 +147,7 @@ export function WoodmartHome() {
             <div className="shop-slide-dots">
               {slides.map((s, i) => (
                 <button
-                  key={s.href}
+                  key={s.id}
                   aria-label={`${i + 1}. koleksiyon: ${s.tag}`}
                   aria-pressed={i === slide}
                   onClick={() => setSlide(i)}

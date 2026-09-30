@@ -294,6 +294,11 @@
   border-radius: 4px;
   margin-bottom: 20px;
 }
+.admin-slide-photo {
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--line);
+}
 .admin-product-form {
   max-width: 672px;
 }

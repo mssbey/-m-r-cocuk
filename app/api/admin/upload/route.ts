@@ -18,7 +18,7 @@ export async function POST(req: Request) {
     const form = await req.formData();
     const file = form.get("file");
     const kind = String(form.get("kind") || "product");
-    if (!["product", "taxonomy", "gallery"].includes(kind))
+    if (!["product", "taxonomy", "gallery", "slide"].includes(kind))
       throw new CatalogError("Geçersiz görsel kategorisi.");
     const gallery = form.get("kind") === "gallery";
     if (!(file instanceof File) || !file.size)
