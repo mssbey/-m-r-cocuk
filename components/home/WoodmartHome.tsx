@@ -14,6 +14,7 @@ import { siteConfig } from "@/lib/config";
 import { FactoryInvite } from "@/components/shared/FactoryInvite";
 import { ReferencesSection } from "@/components/home/ReferencesSection";
 import { CategoryLinks } from "@/components/layout/CategoryLinks";
+import { CategoryIcon } from "@/components/home/CategoryIcon";
 import { collectionGroups } from "@/lib/data/collection-groups";
 import heroSlides from "@/lib/data/hero-slides.json";
 import type { HeroSlide } from "@/lib/admin/catalog-types";
@@ -164,37 +165,25 @@ export function WoodmartHome() {
             title="ÖNE ÇIKAN KATEGORİLER"
             text="Bebeklikten gençliğe, her yaşa ve her hayale bir oda."
           />
-          <div className="room-discovery-grid">
-            {categories
-              .filter((c) => c.coverImage)
-              .slice(0, 5)
-              .map((c) => (
-                <Link
-                  className="room-discovery-card"
-                  href={`/${c.slug}`}
-                  key={c.slug}
-                >
-                  <div className="room-discovery-image">
-                    <Image
-                      src={c.coverImage!}
-                      alt={c.name}
-                      fill
-                      sizes="(min-width: 801px) 40vw, (min-width: 541px) 50vw, 100vw"
-                      className="object-cover"
-                    />
-                    <span className="room-discovery-count">
-                      {active.filter((p) => p.category === c.slug).length} ürün
-                    </span>
-                  </div>
-                  <div className="room-discovery-copy">
-                    <h3>{c.name}</h3>
-                    <p>{c.shortDescription}</p>
-                    <span className="room-discovery-link">
-                      Koleksiyonu keşfet <span aria-hidden="true">↗</span>
-                    </span>
-                  </div>
-                </Link>
-              ))}
+          <div className="category-icon-grid">
+            {categories.map((c) => (
+              <Link
+                className="category-icon-card"
+                href={`/${c.slug}`}
+                key={c.slug}
+              >
+                <span className="category-icon">
+                  <CategoryIcon slug={c.slug} />
+                </span>
+                <div className="category-icon-copy">
+                  <h3>{c.name}</h3>
+                  <p>{c.shortDescription}</p>
+                </div>
+                <span className="category-icon-arrow" aria-hidden="true">
+                  ›
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
