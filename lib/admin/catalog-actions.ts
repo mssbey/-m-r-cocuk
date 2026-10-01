@@ -15,6 +15,7 @@ import {
   type HeroSlide,
 } from "./catalog-types";
 import { CatalogError } from "./catalog-store";
+import { isRoomSet } from "@/lib/room-sets";
 import { validUploadReceipt } from "./upload-receipt";
 type Input = Record<string, unknown>;
 const fail = (message: string): never => {
@@ -74,6 +75,8 @@ export function applyCatalogAction(catalog: Catalog, input: Input) {
     if (!catalog.products.some((p) => p.slug === input.slug))
       fail("Ürün bulunamadı.");
     catalog.products = catalog.products.filter((p) => p.slug !== input.slug);
+    for (const p of catalog.products)
+      if (p.parentSet === input.slug) p.parentSet = null;
     return;
   }
   if (action === "saveProduct") {
@@ -172,6 +175,23 @@ export function applyCatalogAction(catalog: Catalog, input: Input) {
       !category!.subcategories.some((s) => s.slug === product.subcategory)
     )
       product.subcategory = null;
+    if ("parentSet" in data) {
+      const parentSet = text(data.parentSet, 200) || null;
+      if (
+        parentSet &&
+        (parentSet === product.slug ||
+          !catalog.products.some(
+            (p) => p.slug === parentSet && isRoomSet(p),
+          ))
+      )
+        fail("Seçilen oda takımı bulunamadı. Sayfayı yenileyin.");
+      product.parentSet = isRoomSet(product) ? null : parentSet;
+    }
+    // Takımın adresi değişirse veya takım olmaktan çıkarsa parçalar kopmasın.
+    if (previous)
+      for (const p of catalog.products)
+        if (p.parentSet === previous.slug)
+          p.parentSet = isRoomSet(product) ? product.slug : null;
     if (previous)
       catalog.products[catalog.products.indexOf(previous)] = product;
     else catalog.products.unshift(product);

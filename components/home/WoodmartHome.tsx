@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { categories } from "@/lib/data/categories";
 import { products } from "@/lib/data/products";
+import { isRoomSet } from "@/lib/room-sets";
 import { FavoriteButton } from "@/components/product/FavoriteButton";
 import { PriceTag } from "@/components/shared/PriceTag";
 import { buildDefaultWhatsAppUrl } from "@/lib/whatsapp";
@@ -67,7 +68,8 @@ export function WoodmartHome() {
     setTab(index);
     reset();
   }
-  const active = products.filter((p) => p.status === "active");
+  // Ana sayfada yalnızca oda takımları; tekli parçalar takımın içinde.
+  const active = products.filter((p) => p.status === "active" && isRoomSet(p));
   const shown = (
     tab === 2
       ? active.filter((p) => p.campaign)
@@ -235,8 +237,8 @@ export function WoodmartHome() {
       >
         <Heading
           eyebrow="ODASININ YENİ FAVORİLERİ"
-          title="SEÇİLİ ÜRÜNLER"
-          text="Hayatınıza eşlik edecek tasarımları yakından keşfedin."
+          title="ODA TAKIMLARI"
+          text="Bir odaya girin, takımın tüm parçalarını tek tek keşfedin."
         />
         <div
           className="shop-product-tabs"
@@ -321,8 +323,10 @@ export function WoodmartHome() {
                     size="sm"
                   />
                 </div>
-                {p.campaignLabel && (
-                  <span className="shop-product-badge">{p.campaignLabel}</span>
+                {(p.campaignLabel || p.isNew) && (
+                  <span className="shop-product-badge">
+                    {p.campaignLabel || "Yeni"}
+                  </span>
                 )}
               </div>
               <div className="shop-product-content">
@@ -332,9 +336,6 @@ export function WoodmartHome() {
                 </Link>
                 <div className="shop-product-bottom">
                   <PriceTag price={p.price} oldPrice={p.oldPrice} size="sm" />
-                  <Link className="shop-product-detail" href={`/urun/${p.slug}`}>
-                    Ürünü incele <span aria-hidden="true">↗</span>
-                  </Link>
                 </div>
               </div>
             </article>
@@ -342,7 +343,7 @@ export function WoodmartHome() {
         </div>
         {shown.length === 0 && (
           <div className="shop-empty">
-            <p>Şu anda kampanyalı ürün bulunmuyor.</p>
+            <p>Şu anda kampanyalı oda takımı bulunmuyor.</p>
             <Link href="/urunler" className="shop-button">
               Tüm ürünleri keşfet →
             </Link>

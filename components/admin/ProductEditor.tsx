@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCatalog, type CatalogController } from "./useCatalog";
 import { collectionOf } from "@/lib/admin/catalog-types";
+import { isRoomSet } from "@/lib/room-sets";
 import type { Product, ProductImage } from "@/lib/types";
 export function ProductEditor({ slug }: { slug?: string }) {
   const c = useCatalog();
@@ -27,6 +28,9 @@ function Editor({ c, product }: { c: CatalogController; product?: Product }) {
   const [category, setCategory] = useState(product?.category || "");
   const [error, setError] = useState("");
   const selected = c.catalog!.categories.find((x) => x.slug === category);
+  const roomSets = c.catalog!.products.filter(
+    (p) => isRoomSet(p) && p.slug !== product?.slug,
+  );
   const split = (value: FormDataEntryValue | null) =>
     String(value || "")
       .split(",")
@@ -50,6 +54,7 @@ function Editor({ c, product }: { c: CatalogController; product?: Product }) {
         slug: fd.get("slug"),
         category,
         collectionGroup: fd.get("collectionGroup"),
+        parentSet: fd.get("parentSet"),
         description: fd.get("description"),
         dimensions: fd.get("dimensions"),
         colors: split(fd.get("colors")),
@@ -165,6 +170,22 @@ function Editor({ c, product }: { c: CatalogController; product?: Product }) {
                 ))}
               </select>
             </Field>
+            <Field label="Ait olduğu oda takımı">
+              <select name="parentSet" defaultValue={product?.parentSet || ""}>
+                <option value="">Yok (tekli ürün değil)</option>
+                {roomSets.map((x) => (
+                  <option key={x.slug} value={x.slug}>
+                    {x.name}
+                  </option>
+                ))}
+              </select>
+            </Field>
+            <p className="admin-help">
+              Tekli karyola, gardırop, şifonyer gibi parçalar için seçin; ürün o
+              takımın sayfasında “Takımın Parçaları” altında görünür. Ana
+              sayfada yalnızca alt kategorisi “… Takımları” olan odalar
+              gösterilir.
+            </p>
             <Field label="Açıklama">
               <textarea
                 name="description"

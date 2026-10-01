@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { primaryNav } from "@/lib/nav";
+import { categories } from "@/lib/data/categories";
 import { siteConfig } from "@/lib/config";
 import { buildDefaultWhatsAppUrl } from "@/lib/whatsapp";
 import { Logo } from "@/components/shared/Logo";
@@ -113,8 +114,62 @@ export function MobileMenu({
           className="mt-6 flex-1 overflow-y-auto"
           aria-label="Mobil site navigasyonu"
         >
-          <ul className="flex flex-col gap-1">
-            {primaryNav.map((item) => (
+          {/* Kategoriler en üstte, düz liste (örn. BEBEK ODALARI, MONTESSORİ…). */}
+          <ul className="mobile-category-list">
+            {categories.map((category) => {
+              const subs = category.subcategories;
+              const key = `kategori-${category.slug}`;
+              return (
+                <li key={category.slug}>
+                  <div className="mobile-category-row">
+                    <Link href={`/${category.slug}`} onClick={onClose}>
+                      {category.name.toLocaleUpperCase("tr-TR")}
+                    </Link>
+                    {subs.length > 1 ? (
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setExpanded((prev) => (prev === key ? null : key))
+                        }
+                        aria-expanded={expanded === key}
+                        aria-controls={`mobile-submenu-${key}`}
+                        aria-label={`${category.name} alt kategorileri`}
+                      >
+                        <span
+                          aria-hidden="true"
+                          className={expanded === key ? "rotate-90" : ""}
+                        >
+                          ›
+                        </span>
+                      </button>
+                    ) : null}
+                  </div>
+                  {expanded === key ? (
+                    <div
+                      id={`mobile-submenu-${key}`}
+                      className="mobile-submenu"
+                    >
+                      {subs.map((sub) => (
+                        <Link
+                          href={`/${category.slug}?alt=${sub.slug}`}
+                          key={sub.slug}
+                          onClick={onClose}
+                        >
+                          {sub.name}
+                          <span aria-hidden="true">›</span>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
+                </li>
+              );
+            })}
+          </ul>
+
+          <ul className="mt-3 flex flex-col gap-1">
+            {primaryNav
+              .filter((item) => item.href !== "/urunler")
+              .map((item) => (
               <li key={item.href}>
                 {item.megaMenu ? (
                   <div>
@@ -185,6 +240,15 @@ export function MobileMenu({
                 )}
               </li>
             ))}
+            <li>
+              <Link
+                href="/urunler"
+                onClick={onClose}
+                className="block rounded-xl px-3 py-3 text-base font-medium text-brand-navy transition-colors hover:bg-brand-cream"
+              >
+                Tüm Ürünler
+              </Link>
+            </li>
             <li>
               <Link
                 href="/favorilerim"

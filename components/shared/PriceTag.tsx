@@ -19,7 +19,9 @@ export function PriceTag({ price, oldPrice, size = "md" }: PriceTagProps) {
             : "text-base font-medium text-brand-navy"
         }
       >
-        Fiyat ve detaylı bilgi için iletişime geçin
+        {size === "sm"
+          ? "Fiyat için iletişime geçin"
+          : "Fiyat ve detaylı bilgi için iletişime geçin"}
       </p>
     );
   }

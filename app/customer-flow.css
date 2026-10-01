@@ -1005,3 +1005,29 @@
     font-size: 11px;
   }
 }
+.mobile-category-list > li {
+  border-bottom: 1px solid var(--color-sky-light);
+}
+.mobile-category-row {
+  display: flex;
+  align-items: center;
+}
+.mobile-category-row > a {
+  flex: 1;
+  padding: 16px 8px;
+  color: var(--color-navy);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+.mobile-category-row > button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--color-navy);
+  font-size: 22px;
+}
+.mobile-category-row > button span {
+  display: inline-block;
+  transition: transform 0.2s;
+}

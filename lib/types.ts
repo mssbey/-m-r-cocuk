@@ -40,6 +40,8 @@ export type Product = {
   collection: string | null;
   /** Editorial collection; the existing product-family relationship is preserved. */
   collectionGroup?: string | null;
+  /** Tekli ürünün ait olduğu oda takımının slug'ı (bkz. lib/room-sets.ts). */
+  parentSet?: string | null;
   isNew?: boolean;
   fabrics?: string[];
   shortDescription: string;

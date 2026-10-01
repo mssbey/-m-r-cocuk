@@ -17,6 +17,7 @@ import { PriceTag } from "@/components/shared/PriceTag";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { FavoriteButton } from "@/components/product/FavoriteButton";
+import { getParentSets, getSetPieces, isRoomSet } from "@/lib/room-sets";
 
 export function generateStaticParams() {
   return getAllProducts().map((p) => ({ slug: p.slug }));
@@ -55,10 +56,19 @@ export default async function ProductDetailPage({
   if (!product) notFound();
 
   const category = getCategoryBySlug(product.category);
-  const related = getRelatedProducts(product);
+  const all = getAllProducts();
+  const roomSet = isRoomSet(product);
+  // Oda takımında: takımın tekli parçaları. Tekli üründe: ait olduğu takım.
+  const setPieces = roomSet ? getSetPieces(product, all) : [];
+  const parentSets = getParentSets(product, all);
+  const shown = new Set([product, ...setPieces, ...parentSets].map((p) => p.id));
   const collectionProducts = product.collection
-    ? getCollectionProducts(product.collection).filter((p) => p.id !== product.id)
+    ? getCollectionProducts(product.collection).filter((p) => !shown.has(p.id))
     : [];
+  collectionProducts.forEach((p) => shown.add(p.id));
+  const related = getRelatedProducts(product, 8)
+    .filter((p) => !shown.has(p.id))
+    .slice(0, 4);
 
   const productUrl = absoluteUrl(`/urun/${product.slug}`);
   const whatsappUrl = buildProductWhatsAppUrl(product.name, productUrl);
@@ -90,8 +100,10 @@ export default async function ProductDetailPage({
         ]}
       />
 
-      <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-14">
-        <ProductGallery images={product.images} productName={product.name} />
+      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,560px)_minmax(0,1fr)] lg:gap-12">
+        <div className="mx-auto w-full max-w-xl lg:mx-0">
+          <ProductGallery images={product.images} productName={product.name} />
+        </div>
 
         <div>
           {category ? (
@@ -204,9 +216,34 @@ export default async function ProductDetailPage({
         </div>
       </div>
 
+      {roomSet ? (
+        <section className="mt-14" id="takimin-parcalari">
+          <h2 className="font-display text-2xl text-brand-navy">Takımın Parçaları</h2>
+          <p className="mt-1 text-sm text-brand-gray">
+            {setPieces.length > 0
+              ? "Bu odadaki ürünleri tek tek inceleyebilir, ayrı ayrı da sipariş verebilirsiniz."
+              : "Bu takımın tekli ürünleri yakında eklenecek. Parça parça bilgi için bize yazabilirsiniz."}
+          </p>
+          {setPieces.length > 0 ? (
+            <div className="mt-6">
+              <ProductGrid products={setPieces} />
+            </div>
+          ) : null}
+        </section>
+      ) : null}
+
+      {parentSets.length > 0 ? (
+        <section className="mt-14">
+          <h2 className="font-display text-2xl text-brand-navy">Bu Ürünün Yer Aldığı Takım</h2>
+          <div className="mt-6">
+            <ProductGrid products={parentSets} />
+          </div>
+        </section>
+      ) : null}
+
       {collectionProducts.length > 0 ? (
         <section className="mt-16">
-          <h2 className="font-display text-2xl text-brand-navy">Aynı Koleksiyondaki Parçalar</h2>
+          <h2 className="font-display text-2xl text-brand-navy">Aynı Koleksiyondaki Ürünler</h2>
           <div className="mt-6">
             <ProductGrid products={collectionProducts} />
           </div>

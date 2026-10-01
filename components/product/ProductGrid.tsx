@@ -12,9 +12,9 @@ export function ProductGrid({
   return (
     <div
       className={cn(
-        "grid gap-4 sm:gap-6",
+        "grid gap-3 sm:gap-5",
         view === "grid"
-          ? "grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+          ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-4"
           : "grid-cols-1"
       )}
     >

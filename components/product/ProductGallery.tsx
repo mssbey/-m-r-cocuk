@@ -18,7 +18,7 @@ export function ProductGallery({
 
   if (images.length === 0) {
     return (
-      <div className="aspect-square w-full overflow-hidden rounded-3xl">
+      <div className="aspect-[4/3] w-full overflow-hidden rounded-3xl">
         <PlaceholderImage label={`${productName} görseli yakında`} />
       </div>
     );
@@ -46,7 +46,7 @@ export function ProductGallery({
   return (
     <div>
       <div
-        className="relative aspect-square w-full overflow-hidden rounded-3xl bg-brand-sky"
+        className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-brand-babyblue/30 bg-white"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -55,8 +55,8 @@ export function ProductGallery({
           alt={active.alt}
           fill
           priority
-          sizes="(min-width: 1024px) 45vw, 100vw"
-          className="object-cover"
+          sizes="(min-width: 1024px) 560px, 100vw"
+          className="object-contain"
         />
 
         {images.length > 1 ? (
@@ -108,11 +108,11 @@ export function ProductGallery({
               aria-label={`${index + 1}. görseli göster`}
               aria-current={index === activeIndex}
               className={cn(
-                "relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl border-2 transition-colors",
+                "relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-xl border-2 transition-colors",
                 index === activeIndex ? "border-brand-navy" : "border-transparent"
               )}
             >
-              <Image src={img.src} alt={img.alt} fill sizes="80px" className="object-cover" />
+              <Image src={img.src} alt={img.alt} fill sizes="64px" className="object-cover" />
             </button>
           ))}
         </div>
