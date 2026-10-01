@@ -12,16 +12,28 @@
         "name": "Bebek Odası Takımları"
       },
       {
-        "slug": "besikler",
-        "name": "Beşikler"
-      },
-      {
         "slug": "bebek-karyolalari",
         "name": "Bebek Karyolaları"
       }
     ],
     "seoTitle": "Bebek Odası Takımları ve Mobilyaları | Ömür Çocuk",
     "seoDescription": "Beşik, bebek karyolası ve bebek odası takımı modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
+  },
+  {
+    "slug": "besikler",
+    "name": "Beşikler",
+    "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
+    "description": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
+    "imageFolder": "bebek-odalari",
+    "coverImage": "/images/products/bebek-odalari/grow-buyuyen-besik-beyaz-sallanmayan-01.webp",
+    "subcategories": [
+      {
+        "slug": "buyuyen-besikler",
+        "name": "Büyüyen Beşikler"
+      }
+    ],
+    "seoTitle": "Beşikler ve Büyüyen Beşik Modelleri | Ömür Çocuk",
+    "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
   },
   {
     "slug": "cocuk-odalari",

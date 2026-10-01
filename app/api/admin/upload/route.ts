@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { uploadReceipt } from "@/lib/admin/upload-receipt";
+import { adminErrorResponse } from "@/lib/admin/error-response";
 import sharp from "sharp";
 import { cookies } from "next/headers";
 import { ADMIN_SESSION_COOKIE, isSessionValid } from "@/lib/admin/auth";
@@ -80,14 +81,6 @@ export async function POST(req: Request) {
       revision: catalog.revision,
     });
   } catch (e) {
-    return Response.json(
-      {
-        error:
-          e instanceof CatalogError
-            ? e.message
-            : "Görsel yüklenemedi. Lütfen tekrar deneyin.",
-      },
-      { status: e instanceof CatalogError ? e.status : 502 },
-    );
+    return adminErrorResponse(e, "Görsel yüklenemedi. Lütfen tekrar deneyin.");
   }
 }

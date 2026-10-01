@@ -115,6 +115,7 @@ try {
     ["/admin/products/new/", "product-form"],
     ["/admin/taxonomy/", "taxonomy"],
     ["/admin/gallery/", "gallery"],
+    ["/admin/slider/", "slider"],
   ]) {
     await page.goto(base + route);
     await page
@@ -144,6 +145,7 @@ try {
   await categoryForm
     .getByLabel("Ad", { exact: true })
     .fill(initial.categories[0].name);
+  await categoryForm.getByLabel("URL (slug)").fill(initial.categories[0].slug);
   await categoryForm.getByRole("button", { name: "Ekle", exact: true }).click();
   await categoryForm.getByRole("alert").waitFor();
   assert.equal(
@@ -151,6 +153,7 @@ try {
     initial.categories[0].name,
   );
   await categoryForm.getByLabel("Ad", { exact: true }).fill("Form Denemesi");
+  await categoryForm.getByLabel("URL (slug)").fill("");
   await categoryForm.getByRole("button", { name: "Ekle", exact: true }).click();
   await categoryForm.getByRole("status").waitFor();
   assert.equal(
@@ -232,6 +235,20 @@ try {
   })
     .png()
     .toBuffer();
+  await page.goto(`${base}/admin/slider/`);
+  const slideCard = page.locator(".admin-card").first();
+  await slideCard.getByLabel("Görseli değiştir").setInputFiles({
+    name: "slider.png", mimeType: "image/png", buffer: png,
+  });
+  await slideCard.getByRole("button", { name: "Değişiklikleri kaydet" }).click();
+  await slideCard.getByRole("status").waitFor();
+  const savedSlide = (await get()).slides[0];
+  assert.notEqual(savedSlide.image, initial.slides[0].image);
+  assert.equal((await context.request.get(base + savedSlide.image)).status(), 200);
+  await page.reload();
+  await page.locator(".admin-card").first().locator("img").waitFor();
+  assert.equal(await page.locator(".admin-card").first().locator("img").getAttribute("src"), savedSlide.image);
+  check("slider image upload, save, media delivery and persistence after reload");
   let current = await get();
   const invalid = await context.request.post(`${base}/api/admin/upload/`, {
     multipart: {

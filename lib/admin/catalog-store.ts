@@ -2,7 +2,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { createHash, randomUUID } from "node:crypto";
 import os from "node:os";
-import { githubFetch } from "./github";
+import { githubFetch, GitHubApiError } from "./github";
 import type { Catalog } from "./catalog-types";
 export const catalogPaths = {
   products: "lib/data/products.json",
@@ -28,7 +28,7 @@ const sourceRevision = (files: string[]) =>
 async function readSourceFiles() {
   return Promise.all(
     Object.values(catalogPaths).map((p) =>
-      fs.readFile(path.join(process.cwd(), p), "utf8"),
+      fs.readFile(path.join(process.cwd(), "lib/data", path.basename(p)), "utf8"),
     ),
   );
 }
@@ -205,7 +205,9 @@ export async function saveCatalog(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sha: next.sha, force: false }),
     });
-  } catch {
+  } catch (error) {
+    if (!(error instanceof GitHubApiError) || ![409, 422].includes(error.status))
+      throw error;
     throw new CatalogError(
       "Liste değişmiş veya kayıt tamamlanamadı. Sayfayı yenileyip tekrar deneyin.",
       409,

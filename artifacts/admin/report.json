@@ -4,6 +4,7 @@
     "four panels: no body overflow at 320, 390, 768, 1024, 1440 pixels",
     "taxonomy errors retain inputs and successful creation resets the new-card form",
     "empty search, filtered reorder preserves hidden products, persistence, invalid and stale reorder rejection",
+    "slider image upload, save, media delivery and persistence after reload",
     "product creation, duplicate slugs, image deduplication, category/collection usage guards and atomic reference migration",
     "image cover selection stays local until product form save",
     "gallery limits, signature and format checks, edit, cancel/confirm delete, product and taxonomy deletion",

@@ -8,4 +8,7 @@ admin-server
 .git
 .env
 .env.local
+.env.*
+artifacts/
+.claude/
 coverage
