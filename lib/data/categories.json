@@ -79,20 +79,20 @@
     "seoDescription": "Genç odası takımı, ranza ve çalışma masası modelleri. Fonksiyonel ve şık genç odaları için Ömür Çocuk."
   },
   {
-    "slug": "montessori-odalari",
-    "name": "Montessori Odası",
-    "shortDescription": "Çocukların bağımsız hareket edebileceği, güvende hissedebileceği alanlar.",
+    "slug": "montessori",
+    "name": "Montessori",
+    "shortDescription": "Montessori yaklaşımından ilham alan yer yataklarıyla, çocukların kendi odalarında daha bağımsız ve güvenli biçimde hareket etmesine olanak veren tasarımlar.",
     "description": "Montessori yaklaşımından ilham alan yer yataklarıyla, çocukların kendi odalarında daha bağımsız ve güvenli biçimde hareket etmesine olanak veren tasarımlar.",
     "imageFolder": "montessori-odalari",
     "coverImage": "/images/products/montessori-odalari/vera-montessori-catili-yatak-01.webp",
     "subcategories": [
       {
-        "slug": "montessori-yataklar",
-        "name": "Montessori Yataklar"
+        "name": "Montessori Yataklar",
+        "slug": "montessori-yataklar"
       }
     ],
-    "seoTitle": "Montessori Çocuk Odası Yatakları | Ömür Çocuk",
-    "seoDescription": "Montessori yer yatakları ve çocuk odası mobilyaları. Esenyurt ve Gaziosmanpaşa mağazalarımızda keşfedin."
+    "seoTitle": "Montessori | Ömür Çocuk",
+    "seoDescription": "Montessori yaklaşımından ilham alan yer yataklarıyla, çocukların kendi odalarında daha bağımsız ve güvenli biçimde hareket etmesine olanak veren tasarımlar."
   },
   {
     "slug": "dolap-gardrop",
