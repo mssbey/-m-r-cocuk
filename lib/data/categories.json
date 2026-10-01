@@ -28,11 +28,11 @@
     "coverImage": "/images/products/bebek-odalari/grow-buyuyen-besik-beyaz-sallanmayan-01.webp",
     "subcategories": [
       {
-        "slug": "buyuyen-besikler",
-        "name": "Büyüyen Beşikler"
+        "name": "Büyüyen Beşikler",
+        "slug": "buyuyen-besikler"
       }
     ],
-    "seoTitle": "Beşikler ve Büyüyen Beşik Modelleri | Ömür Çocuk",
+    "seoTitle": "Beşikler | Ömür Çocuk",
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
   },
   {
