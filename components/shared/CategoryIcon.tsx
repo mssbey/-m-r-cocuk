@@ -7,6 +7,8 @@ const paths: Record<string, string> = {
   yeni: "m32 8 7 17 17 7-17 7-7 17-7-17-17-7 17-7Z",
   "bebek-odalari":
     "M12 20v30m40-30v30M12 27h40M12 45h40M20 27v18m8-18v18m8-18v18m8-18v18M8 54h48M18 50v4m28-4v4",
+  "cocuk-odalari":
+    "M10 52V22m0 16h44v14M16 38v-6a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v6M46 10l2 4 4 .6-3 2.9.7 4-3.7-1.9-3.7 1.9.7-4-3-2.9 4-.6ZM10 52v4m44-4v4",
   "genc-odalari":
     "M10 48V22h44v26M10 42h44M14 42V32h36v10M18 26h10v6m8-6h10v6M10 48v6m44-6v6",
   "montessori-odalari":

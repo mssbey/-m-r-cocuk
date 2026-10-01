@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { randomUUID } from "node:crypto";
+import { createHash, randomUUID } from "node:crypto";
+import os from "node:os";
 import { githubFetch } from "./github";
 import type { Catalog } from "./catalog-types";
 export const catalogPaths = {
@@ -18,6 +19,19 @@ const localDir = () =>
   process.env.NODE_ENV !== "production"
     ? process.env.ADMIN_DATA_DIR
     : undefined;
+// Development without ADMIN_DATA_DIR edits the site's own data files, so admin
+// changes appear on the local site immediately and can be committed as usual.
+export const sourceMode = () =>
+  process.env.NODE_ENV !== "production" && !process.env.ADMIN_DATA_DIR;
+const sourceRevision = (files: string[]) =>
+  createHash("sha1").update(files.join("|")).digest("hex");
+async function readSourceFiles() {
+  return Promise.all(
+    Object.values(catalogPaths).map((p) =>
+      fs.readFile(path.join(process.cwd(), p), "utf8"),
+    ),
+  );
+}
 export class CatalogError extends Error {
   constructor(
     message: string,
@@ -27,6 +41,14 @@ export class CatalogError extends Error {
   }
 }
 export async function readCatalog(): Promise<Catalog> {
+  if (sourceMode()) {
+    const files = await readSourceFiles();
+    const keys = Object.keys(catalogPaths);
+    return {
+      ...Object.fromEntries(keys.map((k, i) => [k, JSON.parse(files[i])])),
+      revision: sourceRevision(files),
+    } as Catalog;
+  }
   const dir = localDir();
   if (dir)
     return JSON.parse(
@@ -53,6 +75,48 @@ export async function saveCatalog(
   expected: string,
   uploads: { path: string; content: Buffer }[] = [],
 ) {
+  if (sourceMode()) {
+    const lockPath = path.join(os.tmpdir(), "omur-admin-catalog.lock");
+    // A lock left behind by a crashed dev server must not block saving forever.
+    const stale = await fs
+      .stat(lockPath)
+      .then((s) => Date.now() - s.mtimeMs > 30_000)
+      .catch(() => false);
+    if (stale) await fs.unlink(lockPath).catch(() => {});
+    const lock = await fs.open(lockPath, "wx").catch(() => {
+      throw new CatalogError("Başka bir kayıt sürüyor. Tekrar deneyin.", 409);
+    });
+    try {
+      if ((await readCatalog()).revision !== expected)
+        throw new CatalogError(
+          "Liste değişmiş. Sayfayı yenileyip tekrar deneyin.",
+          409,
+        );
+      for (const upload of uploads) {
+        const target = path.join(process.cwd(), upload.path);
+        await fs.mkdir(path.dirname(target), { recursive: true });
+        await fs.writeFile(target, upload.content);
+      }
+      const files = Object.entries(catalogPaths).map(
+        ([key, p]) =>
+          [
+            p,
+            JSON.stringify(catalog[key as keyof typeof catalogPaths], null, 2) +
+              "\n",
+          ] as const,
+      );
+      for (const [p, content] of files) {
+        const target = path.join(process.cwd(), p);
+        const current = await fs.readFile(target, "utf8");
+        if (current !== content) await fs.writeFile(target, content);
+      }
+      catalog.revision = sourceRevision(files.map(([, content]) => content));
+    } finally {
+      await lock.close();
+      await fs.unlink(lockPath);
+    }
+    return;
+  }
   const dir = localDir();
   if (dir) {
     const lock = await fs

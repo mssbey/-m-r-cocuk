@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { githubFetch } from "@/lib/admin/github";
+import { sourceMode } from "@/lib/admin/catalog-store";
 export const runtime = "nodejs";
 // Only generated upload names can be read; repository paths and tokens stay private.
 export async function GET(
@@ -12,7 +13,11 @@ export async function GET(
     return new Response(null, { status: 404 });
   try {
     let buffer: Buffer;
-    if (process.env.NODE_ENV !== "production" && process.env.ADMIN_DATA_DIR)
+    if (sourceMode())
+      buffer = await fs.readFile(
+        path.join(process.cwd(), "public/images/uploads", file),
+      );
+    else if (process.env.NODE_ENV !== "production" && process.env.ADMIN_DATA_DIR)
       buffer = await fs.readFile(
         path.join(process.env.ADMIN_DATA_DIR, "public/images/uploads", file),
       );

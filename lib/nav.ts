@@ -1,4 +1,5 @@
 import { categories } from "@/lib/data/categories";
+import type { Category } from "@/lib/types";
 import { collectionGroups } from "@/lib/data/collection-groups";
 
 export type NavLink = {
@@ -19,6 +20,12 @@ export type NavItem = NavLink & {
   };
 };
 
+// Adresi "odasi/odalari" içeren kategoriler (Bebek Odası, Çocuk Odası…) "Odalar" altında toplanır.
+const isRoomCategory = (category: Category) =>
+  /oda(s|lar)/i.test(category.slug);
+const categoryLinks = (list: Category[]): NavLink[] =>
+  list.map((category) => ({ label: category.name, href: `/${category.slug}` }));
+
 /**
  * Masaüstünde kategori sayısı tek satıra sığmayacak kadar fazla olduğu için
  * (9 üst seviye öge yerine) tüm ürün kategorileri tek bir "Ürünler" mega
@@ -36,26 +43,13 @@ export const primaryNav: NavItem[] = [
       sections: [
         {
           title: "Odalar",
-          links: [
-            { label: "Bebek Odaları", href: "/bebek-odalari" },
-            { label: "Genç Odaları", href: "/genc-odalari" },
-            { label: "Montessori Odaları", href: "/montessori-odalari" },
-          ],
+          links: categoryLinks(categories.filter(isRoomCategory)),
         },
         {
-          title: "Mobilyalar",
-          links: [
-            { label: "Dolap & Gardırop", href: "/dolap-gardrop" },
-            { label: "Şifonyer & Komodin", href: "/sifonyer-komodin" },
-          ],
-        },
-        {
-          title: "Diğer",
-          links: [
-            ...categories
-              .filter((category) => !["bebek-odalari", "genc-odalari", "montessori-odalari", "dolap-gardrop", "sifonyer-komodin"].includes(category.slug))
-              .map((category) => ({ label: category.name, href: `/${category.slug}` })),
-          ],
+          title: "Mobilya ve Diğer",
+          links: categoryLinks(
+            categories.filter((category) => !isRoomCategory(category)),
+          ),
         },
       ],
       featured: { label: "Tüm Ürünleri Görüntüle", href: "/urunler" },
@@ -83,10 +77,7 @@ export const primaryNav: NavItem[] = [
   { label: "İletişim", href: "/iletisim" },
 ];
 
-export const footerCategoryLinks: NavLink[] = categories.map((category) => ({
-  label: category.name,
-  href: `/${category.slug}`,
-}));
+export const footerCategoryLinks: NavLink[] = categoryLinks(categories);
 
 export const footerCorporateLinks: NavLink[] = [
   { label: "Biz Kimiz", href: "/biz-kimiz" },
