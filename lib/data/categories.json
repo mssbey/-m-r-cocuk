@@ -33,34 +33,34 @@
   {
     "slug": "genc-odalari",
     "name": "Genç Odası",
-    "shortDescription": "Ranzalardan çalışma masalarına, gençlerin tarzına uygun fonksiyonel odalar.",
+    "shortDescription": "Genç odası takımları, ranzalar, çalışma masaları ve kitaplıklarla; büyüyen çocuklarınızın ihtiyaçlarına ve tarzına uygun kullanışlı yaşam alanları.",
     "description": "Genç odası takımları, ranzalar, çalışma masaları ve kitaplıklarla; büyüyen çocuklarınızın ihtiyaçlarına ve tarzına uygun kullanışlı yaşam alanları.",
     "imageFolder": "genc-odalari",
     "coverImage": "/images/products/genc-odalari/vera-full-oda-takimi-beyaz-01.webp",
     "subcategories": [
       {
-        "slug": "genc-odasi-takimlari",
-        "name": "Genç Odası Takımları"
+        "name": "Genç Odası Takımları",
+        "slug": "genc-odasi-takimlari"
       },
       {
-        "slug": "ranzalar",
-        "name": "Ranzalar"
+        "name": "Ranzalar",
+        "slug": "ranzalar"
       },
       {
-        "slug": "cocuk-karyolalari",
-        "name": "Çocuk Karyolaları"
+        "name": "Çocuk Karyolaları",
+        "slug": "cocuk-karyolalari"
       },
       {
-        "slug": "calisma-masalari",
-        "name": "Çalışma Masaları"
+        "name": "Çalışma Masaları",
+        "slug": "calisma-masalari"
       },
       {
-        "slug": "kitapliklar",
-        "name": "Kitaplıklar"
+        "name": "Kitaplıklar",
+        "slug": "kitapliklar"
       }
     ],
-    "seoTitle": "Genç Odası Takımları ve Ranza Modelleri | Ömür Çocuk",
-    "seoDescription": "Genç odası takımı, ranza ve çalışma masası modelleri. Fonksiyonel ve şık genç odaları için Ömür Çocuk."
+    "seoTitle": "Genç Odası | Ömür Çocuk",
+    "seoDescription": "Genç odası takımları, ranzalar, çalışma masaları ve kitaplıklarla; büyüyen çocuklarınızın ihtiyaçlarına ve tarzına uygun kullanışlı yaşam alanları."
   },
   {
     "slug": "besikler",
