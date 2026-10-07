@@ -134,6 +134,17 @@
     "seoDescription": ""
   },
   {
+    "name": "Outlet Ürünler",
+    "slug": "outlet-urunler",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "outlet-urunler",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Outlet Ürünler | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
     "slug": "besikler",
     "name": "Beşikler",
     "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
@@ -148,17 +159,6 @@
     ],
     "seoTitle": "Beşikler | Ömür Çocuk",
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
-    "name": "Outlet Ürünler",
-    "slug": "outlet-urunler",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "outlet-urunler",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Outlet Ürünler | Ömür Çocuk",
-    "seoDescription": ""
   },
   {
     "slug": "sifonyer-komodin",
