@@ -101,6 +101,17 @@
     "seoDescription": ""
   },
   {
+    "name": "Ranza",
+    "slug": "ranza",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "ranza",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Ranza | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
     "slug": "besikler",
     "name": "Beşikler",
     "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
@@ -115,17 +126,6 @@
     ],
     "seoTitle": "Beşikler | Ömür Çocuk",
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
-    "name": "Ranza",
-    "slug": "ranza",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "ranza",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Ranza | Ömür Çocuk",
-    "seoDescription": ""
   },
   {
     "slug": "sifonyer-komodin",
