@@ -407,7 +407,7 @@ export function WoodmartHome() {
         <div>
           <p className="shop-eyebrow">HER DETAYINDA SEVGİ</p>
           <h2>
-            Ömür Çocuk.
+            <span className="shop-about-brand">Ömür Çocuk.</span>
             <br />
             Birlikte büyüyen tasarımlar.
           </h2>

@@ -711,6 +711,10 @@ footer .container-brand {
   line-height: 1.4;
   margin: 12px 0 20px;
 }
+.shop-about h2 .shop-about-brand {
+  color: #168dcc;
+  font-weight: 800;
+}
 .shop-about > div > p:not(.shop-eyebrow) {
   color: var(--color-gray);
   font-size: 14px;
