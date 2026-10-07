@@ -199,5 +199,16 @@
     "subcategories": [],
     "seoTitle": "Tekli Ürünler | Ömür Çocuk",
     "seoDescription": ""
+  },
+  {
+    "name": "Outlet Ürünler",
+    "slug": "outlet-urunler",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "outlet-urunler",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Outlet Ürünler | Ömür Çocuk",
+    "seoDescription": ""
   }
 ]
