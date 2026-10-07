@@ -31,22 +31,6 @@
     "seoDescription": "Çocuk odası takımları, çocuk karyolaları ve tamamlayıcı mobilyalarla; okul öncesi ve okul çağındaki çocuklar için güvenli, renkli ve kullanışlı yaşam alanları."
   },
   {
-    "slug": "besikler",
-    "name": "Beşikler",
-    "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
-    "description": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
-    "imageFolder": "bebek-odalari",
-    "coverImage": "/images/products/bebek-odalari/grow-buyuyen-besik-beyaz-sallanmayan-01.webp",
-    "subcategories": [
-      {
-        "name": "Büyüyen Beşikler",
-        "slug": "buyuyen-besikler"
-      }
-    ],
-    "seoTitle": "Beşikler | Ömür Çocuk",
-    "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
     "slug": "genc-odalari",
     "name": "Genç Odası",
     "shortDescription": "Ranzalardan çalışma masalarına, gençlerin tarzına uygun fonksiyonel odalar.",
@@ -77,6 +61,22 @@
     ],
     "seoTitle": "Genç Odası Takımları ve Ranza Modelleri | Ömür Çocuk",
     "seoDescription": "Genç odası takımı, ranza ve çalışma masası modelleri. Fonksiyonel ve şık genç odaları için Ömür Çocuk."
+  },
+  {
+    "slug": "besikler",
+    "name": "Beşikler",
+    "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
+    "description": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
+    "imageFolder": "bebek-odalari",
+    "coverImage": "/images/products/bebek-odalari/grow-buyuyen-besik-beyaz-sallanmayan-01.webp",
+    "subcategories": [
+      {
+        "name": "Büyüyen Beşikler",
+        "slug": "buyuyen-besikler"
+      }
+    ],
+    "seoTitle": "Beşikler | Ömür Çocuk",
+    "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
   },
   {
     "slug": "montessori",
