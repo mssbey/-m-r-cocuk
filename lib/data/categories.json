@@ -163,17 +163,6 @@
     "seoDescription": ""
   },
   {
-    "name": "Tekstil",
-    "slug": "tekstil",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "tekstil",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Tekstil | Ömür Çocuk",
-    "seoDescription": ""
-  },
-  {
     "name": "Dolap",
     "slug": "dolap",
     "description": "",
@@ -182,6 +171,17 @@
     "coverImage": null,
     "subcategories": [],
     "seoTitle": "Dolap | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
+    "name": "Tekstil",
+    "slug": "tekstil",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "tekstil",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Tekstil | Ömür Çocuk",
     "seoDescription": ""
   },
   {
