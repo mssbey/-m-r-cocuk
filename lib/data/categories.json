@@ -106,6 +106,17 @@
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
   },
   {
+    "name": "Çalışma Masası",
+    "slug": "calisma-masasi",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "calisma-masasi",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Çalışma Masası | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
     "slug": "sifonyer-komodin",
     "name": "Şifonyer & Komodin",
     "shortDescription": "Bebek ve çocuk odalarını tamamlayan pratik parçalar.",
@@ -128,17 +139,6 @@
     ],
     "seoTitle": "Şifonyer ve Komodin Modelleri | Ömür Çocuk",
     "seoDescription": "Bebek ve çocuk odaları için şifonyer, komodin ve tamamlayıcı mobilya modelleri."
-  },
-  {
-    "name": "Çalışma Masası",
-    "slug": "calisma-masasi",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "calisma-masasi",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Çalışma Masası | Ömür Çocuk",
-    "seoDescription": ""
   },
   {
     "slug": "bebek-arabalari",
