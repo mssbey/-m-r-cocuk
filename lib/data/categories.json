@@ -79,6 +79,17 @@
     "seoDescription": "Montessori yaklaşımından ilham alan yer yataklarıyla, çocukların kendi odalarında daha bağımsız ve güvenli biçimde hareket etmesine olanak veren tasarımlar."
   },
   {
+    "name": "Dolap",
+    "slug": "dolap",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "dolap",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Dolap | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
     "slug": "besikler",
     "name": "Beşikler",
     "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
@@ -93,17 +104,6 @@
     ],
     "seoTitle": "Beşikler | Ömür Çocuk",
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
-    "name": "Dolap",
-    "slug": "dolap",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "dolap",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Dolap | Ömür Çocuk",
-    "seoDescription": ""
   },
   {
     "slug": "sifonyer-komodin",
