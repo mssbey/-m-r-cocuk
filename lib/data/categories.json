@@ -20,6 +20,17 @@
     "seoDescription": "Beşik, bebek karyolası ve bebek odası takımı modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
   },
   {
+    "slug": "cocuk-odalari",
+    "name": "Çocuk Odası",
+    "shortDescription": "Oyun ve uyku alanını bir araya getiren, büyüyen çocuklara uygun odalar.",
+    "description": "Çocuk odası takımları, çocuk karyolaları ve tamamlayıcı mobilyalarla; okul öncesi ve okul çağındaki çocuklar için güvenli, renkli ve kullanışlı yaşam alanları.",
+    "imageFolder": "cocuk-odalari",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Çocuk Odası Takımları | Ömür Çocuk",
+    "seoDescription": "Çocuk odası takımı ve çocuk karyolası modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
+  },
+  {
     "slug": "besikler",
     "name": "Beşikler",
     "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
@@ -34,17 +45,6 @@
     ],
     "seoTitle": "Beşikler | Ömür Çocuk",
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
-    "slug": "cocuk-odalari",
-    "name": "Çocuk Odası",
-    "shortDescription": "Oyun ve uyku alanını bir araya getiren, büyüyen çocuklara uygun odalar.",
-    "description": "Çocuk odası takımları, çocuk karyolaları ve tamamlayıcı mobilyalarla; okul öncesi ve okul çağındaki çocuklar için güvenli, renkli ve kullanışlı yaşam alanları.",
-    "imageFolder": "cocuk-odalari",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Çocuk Odası Takımları | Ömür Çocuk",
-    "seoDescription": "Çocuk odası takımı ve çocuk karyolası modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
   },
   {
     "slug": "genc-odalari",
