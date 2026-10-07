@@ -5548,15 +5548,9 @@
     "updatedAt": "2026-01-15"
   },
   {
-    "id": "nova-3-kapakli-gardirop-safir-mese-beyaz",
-    "slug": "nova-3-kapakli-gardirop-safir-mese-beyaz",
-    "name": "Nova 3 Kapaklı Gardırop - Safir Meşe Beyaz",
-    "category": "dolap-gardrop",
-    "subcategory": "gardroplar",
     "collection": "nova-safir-mese-beyaz",
     "shortDescription": "Odayı toparlayan geniş hacimli gardırop.",
-    "description": "",
-    "productCode": "DG-004",
+    "description": "Bebek, çocuk ve genç odalarına uygun ölçülerde tasarlanan gardıroplar; düzenli ve ferah bir oda deneyimi sunar.",
     "images": [
       {
         "src": "/images/products/dolap-gardrop/nova-3-kapakli-gardirop-safir-mese-beyaz-01.webp",
@@ -5621,7 +5615,7 @@
     },
     "price": null,
     "oldPrice": null,
-    "campaignLabel": null,
+    "campaignLabel": "",
     "colors": [],
     "dimensions": null,
     "materials": [],
@@ -5629,14 +5623,24 @@
     "optionalParts": [],
     "features": [],
     "careNotes": [],
-    "deliveryInfo": null,
+    "deliveryInfo": "",
     "featured": false,
     "campaign": false,
     "status": "active",
     "seoTitle": "Nova 3 Kapaklı Gardırop - Safir Meşe Beyaz | Ömür Çocuk",
     "seoDescription": "Odayı toparlayan geniş hacimli gardırop.",
+    "id": "nova-3-kapakli-gardirop-safir-mese-beyaz",
+    "slug": "nova-3-kapakli-gardirop-safir-mese-beyaz",
+    "name": "Nova 3 Kapaklı Gardırop - Safir Meşe Beyaz",
+    "category": "dolap",
+    "subcategory": null,
+    "productCode": "DG-004",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-07",
+    "collectionGroup": "",
+    "fabrics": [],
+    "isNew": false,
+    "parentSet": null
   },
   {
     "id": "nova-sedir-karyola-safir-mese-beyaz",
