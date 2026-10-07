@@ -4120,15 +4120,9 @@
     "updatedAt": "2026-01-15"
   },
   {
-    "id": "alya-3-kapakli-gardirop-beyaz",
-    "slug": "alya-3-kapakli-gardirop-beyaz",
-    "name": "Alya 3 Kapaklı Gardırop - Beyaz",
-    "category": "dolap-gardrop",
-    "subcategory": "gardroplar",
     "collection": "alya-beyaz",
     "shortDescription": "Odayı toparlayan geniş hacimli gardırop.",
-    "description": "",
-    "productCode": "DG-001",
+    "description": "Bebek, çocuk ve genç odalarına uygun ölçülerde tasarlanan gardıroplar; düzenli ve ferah bir oda deneyimi sunar.",
     "images": [
       {
         "src": "/images/products/dolap-gardrop/alya-3-kapakli-gardirop-beyaz-01.webp",
@@ -4181,7 +4175,7 @@
     },
     "price": null,
     "oldPrice": null,
-    "campaignLabel": null,
+    "campaignLabel": "",
     "colors": [],
     "dimensions": null,
     "materials": [],
@@ -4189,14 +4183,24 @@
     "optionalParts": [],
     "features": [],
     "careNotes": [],
-    "deliveryInfo": null,
+    "deliveryInfo": "",
     "featured": false,
     "campaign": false,
     "status": "active",
     "seoTitle": "Alya 3 Kapaklı Gardırop - Beyaz | Ömür Çocuk",
     "seoDescription": "Odayı toparlayan geniş hacimli gardırop.",
+    "id": "alya-3-kapakli-gardirop-beyaz",
+    "slug": "alya-3-kapakli-gardirop-beyaz",
+    "name": "Alya 3 Kapaklı Gardırop - Beyaz",
+    "category": "dolap",
+    "subcategory": null,
+    "productCode": "DG-001",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-07",
+    "collectionGroup": "luxury-koleksiyon",
+    "fabrics": [],
+    "isNew": false,
+    "parentSet": null
   },
   {
     "id": "alya-4-kapakli-gardirop-beyaz",
