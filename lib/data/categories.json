@@ -95,22 +95,6 @@
     "seoDescription": "Montessori yaklaşımından ilham alan yer yataklarıyla, çocukların kendi odalarında daha bağımsız ve güvenli biçimde hareket etmesine olanak veren tasarımlar."
   },
   {
-    "slug": "dolap-gardrop",
-    "name": "Dolap & Gardırop",
-    "shortDescription": "Her oda için ferah ve kullanışlı saklama çözümleri.",
-    "description": "Bebek, çocuk ve genç odalarına uygun ölçülerde tasarlanan gardıroplar; düzenli ve ferah bir oda deneyimi sunar.",
-    "imageFolder": "dolap-gardrop",
-    "coverImage": "/images/products/dolap-gardrop/orion-4-kapakli-kitaplikli-cekmeceli-gardirop-aytasi-01.webp",
-    "subcategories": [
-      {
-        "slug": "gardroplar",
-        "name": "Gardıroplar"
-      }
-    ],
-    "seoTitle": "Çocuk Odası Gardırop Modelleri | Ömür Çocuk",
-    "seoDescription": "Çocuk ve genç odaları için gardırop ve dolap modelleri. Kaliteli malzeme, kullanışlı tasarım."
-  },
-  {
     "slug": "sifonyer-komodin",
     "name": "Şifonyer & Komodin",
     "shortDescription": "Bebek ve çocuk odalarını tamamlayan pratik parçalar.",
