@@ -163,26 +163,26 @@
   {
     "slug": "sifonyer-komodin",
     "name": "Şifonyer & Komodin",
-    "shortDescription": "Bebek ve çocuk odalarını tamamlayan pratik parçalar.",
+    "shortDescription": "Şifonyerler ve komodinlerle bebek, çocuk ve genç odalarınızı tamamlayın. Farklı oda konseptleriyle uyumlu, kullanışlı tamamlayıcı ürünler.",
     "description": "Şifonyerler ve komodinlerle bebek, çocuk ve genç odalarınızı tamamlayın. Farklı oda konseptleriyle uyumlu, kullanışlı tamamlayıcı ürünler.",
     "imageFolder": "sifonyer-komodin",
     "coverImage": "/images/products/sifonyer-komodin/sora-8-cekmeceli-sifonyer-01.webp",
     "subcategories": [
       {
-        "slug": "sifonyerler",
-        "name": "Şifonyerler"
+        "name": "Şifonyerler",
+        "slug": "sifonyerler"
       },
       {
-        "slug": "komodinler",
-        "name": "Komodinler"
+        "name": "Komodinler",
+        "slug": "komodinler"
       },
       {
-        "slug": "tamamlayici-urunler",
-        "name": "Tamamlayıcı Ürünler"
+        "name": "Tamamlayıcı Ürünler",
+        "slug": "tamamlayici-urunler"
       }
     ],
-    "seoTitle": "Şifonyer ve Komodin Modelleri | Ömür Çocuk",
-    "seoDescription": "Bebek ve çocuk odaları için şifonyer, komodin ve tamamlayıcı mobilya modelleri."
+    "seoTitle": "Şifonyer & Komodin | Ömür Çocuk",
+    "seoDescription": "Şifonyerler ve komodinlerle bebek, çocuk ve genç odalarınızı tamamlayın. Farklı oda konseptleriyle uyumlu, kullanışlı tamamlayıcı ürünler."
   },
   {
     "slug": "bebek-arabalari",
