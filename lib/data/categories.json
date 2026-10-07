@@ -188,5 +188,16 @@
     "subcategories": [],
     "seoTitle": "Tekstil | Ömür Çocuk",
     "seoDescription": ""
+  },
+  {
+    "name": "Tekli Ürünler",
+    "slug": "tekli-urunler",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "tekli-urunler",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Tekli Ürünler | Ömür Çocuk",
+    "seoDescription": ""
   }
 ]
