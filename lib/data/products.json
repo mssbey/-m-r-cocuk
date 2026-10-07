@@ -6853,15 +6853,9 @@
     "parentSet": null
   },
   {
-    "id": "vera-4-kapakli-cekmeceli-gardirop-beyaz",
-    "slug": "vera-4-kapakli-cekmeceli-gardirop-beyaz",
-    "name": "Vera 4 Kapaklı Çekmeceli Gardırop - Beyaz",
-    "category": "dolap-gardrop",
-    "subcategory": "gardroplar",
     "collection": "vera",
     "shortDescription": "Odayı toparlayan geniş hacimli gardırop.",
-    "description": "",
-    "productCode": "DG-008",
+    "description": "Bebek, çocuk ve genç odalarına uygun ölçülerde tasarlanan gardıroplar; düzenli ve ferah bir oda deneyimi sunar.",
     "images": [
       {
         "src": "/images/products/dolap-gardrop/vera-4-kapakli-cekmeceli-gardirop-beyaz-01.webp",
@@ -6914,7 +6908,7 @@
     },
     "price": null,
     "oldPrice": null,
-    "campaignLabel": null,
+    "campaignLabel": "",
     "colors": [],
     "dimensions": null,
     "materials": [],
@@ -6922,14 +6916,24 @@
     "optionalParts": [],
     "features": [],
     "careNotes": [],
-    "deliveryInfo": null,
+    "deliveryInfo": "",
     "featured": false,
     "campaign": false,
     "status": "active",
     "seoTitle": "Vera 4 Kapaklı Çekmeceli Gardırop - Beyaz | Ömür Çocuk",
     "seoDescription": "Odayı toparlayan geniş hacimli gardırop.",
+    "id": "vera-4-kapakli-cekmeceli-gardirop-beyaz",
+    "slug": "vera-4-kapakli-cekmeceli-gardirop-beyaz",
+    "name": "Vera 4 Kapaklı Çekmeceli Gardırop - Beyaz",
+    "category": "dolap",
+    "subcategory": null,
+    "productCode": "DG-008",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-07",
+    "collectionGroup": "modern-koleksiyon",
+    "fabrics": [],
+    "isNew": false,
+    "parentSet": null
   },
   {
     "id": "vera-bebek-odasi-takimi-beyaz",
