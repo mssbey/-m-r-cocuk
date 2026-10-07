@@ -123,6 +123,17 @@
     "seoDescription": ""
   },
   {
+    "name": "Tekli Ürünler",
+    "slug": "tekli-urunler",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "tekli-urunler",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Tekli Ürünler | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
     "slug": "besikler",
     "name": "Beşikler",
     "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
@@ -137,17 +148,6 @@
     ],
     "seoTitle": "Beşikler | Ömür Çocuk",
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
-    "name": "Tekli Ürünler",
-    "slug": "tekli-urunler",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "tekli-urunler",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Tekli Ürünler | Ömür Çocuk",
-    "seoDescription": ""
   },
   {
     "slug": "sifonyer-komodin",
