@@ -130,17 +130,6 @@
     "seoDescription": "Bebek ve çocuk odaları için şifonyer, komodin ve tamamlayıcı mobilya modelleri."
   },
   {
-    "slug": "bebek-arabalari",
-    "name": "Bebek Arabası",
-    "shortDescription": "Konforlu ve güvenli yolculuklar için bebek arabaları.",
-    "description": "Şehir içi ve günlük kullanıma uygun bebek arabası modelleriyle bebeğiniz için konforlu, güvenli ve kullanışlı bir yolculuk deneyimi.",
-    "imageFolder": "bebek-arabalari",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Bebek Arabası Modelleri | Ömür Çocuk",
-    "seoDescription": "Konforlu ve güvenli bebek arabası modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
-  },
-  {
     "name": "Çalışma Masası",
     "slug": "calisma-masasi",
     "description": "",
@@ -150,6 +139,17 @@
     "subcategories": [],
     "seoTitle": "Çalışma Masası | Ömür Çocuk",
     "seoDescription": ""
+  },
+  {
+    "slug": "bebek-arabalari",
+    "name": "Bebek Arabası",
+    "shortDescription": "Konforlu ve güvenli yolculuklar için bebek arabaları.",
+    "description": "Şehir içi ve günlük kullanıma uygun bebek arabası modelleriyle bebeğiniz için konforlu, güvenli ve kullanışlı bir yolculuk deneyimi.",
+    "imageFolder": "bebek-arabalari",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Bebek Arabası Modelleri | Ömür Çocuk",
+    "seoDescription": "Konforlu ve güvenli bebek arabası modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
   },
   {
     "slug": "kampanyali-urunler",
