@@ -185,17 +185,6 @@
     "seoDescription": ""
   },
   {
-    "name": "Outlet Ürünler",
-    "slug": "outlet-urunler",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "outlet-urunler",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Outlet Ürünler | Ömür Çocuk",
-    "seoDescription": ""
-  },
-  {
     "name": "Dolap",
     "slug": "dolap",
     "description": "",
@@ -204,6 +193,17 @@
     "coverImage": null,
     "subcategories": [],
     "seoTitle": "Dolap | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
+    "name": "Outlet Ürünler",
+    "slug": "outlet-urunler",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "outlet-urunler",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Outlet Ürünler | Ömür Çocuk",
     "seoDescription": ""
   }
 ]
