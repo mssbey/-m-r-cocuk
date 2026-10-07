@@ -63,22 +63,6 @@
     "seoDescription": "Genç odası takımları, ranzalar, çalışma masaları ve kitaplıklarla; büyüyen çocuklarınızın ihtiyaçlarına ve tarzına uygun kullanışlı yaşam alanları."
   },
   {
-    "slug": "besikler",
-    "name": "Beşikler",
-    "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
-    "description": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
-    "imageFolder": "bebek-odalari",
-    "coverImage": "/images/products/bebek-odalari/grow-buyuyen-besik-beyaz-sallanmayan-01.webp",
-    "subcategories": [
-      {
-        "name": "Büyüyen Beşikler",
-        "slug": "buyuyen-besikler"
-      }
-    ],
-    "seoTitle": "Beşikler | Ömür Çocuk",
-    "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
     "slug": "montessori",
     "name": "Montessori",
     "shortDescription": "Montessori yaklaşımından ilham alan yer yataklarıyla, çocukların kendi odalarında daha bağımsız ve güvenli biçimde hareket etmesine olanak veren tasarımlar.",
@@ -93,6 +77,22 @@
     ],
     "seoTitle": "Montessori | Ömür Çocuk",
     "seoDescription": "Montessori yaklaşımından ilham alan yer yataklarıyla, çocukların kendi odalarında daha bağımsız ve güvenli biçimde hareket etmesine olanak veren tasarımlar."
+  },
+  {
+    "slug": "besikler",
+    "name": "Beşikler",
+    "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
+    "description": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
+    "imageFolder": "bebek-odalari",
+    "coverImage": "/images/products/bebek-odalari/grow-buyuyen-besik-beyaz-sallanmayan-01.webp",
+    "subcategories": [
+      {
+        "name": "Büyüyen Beşikler",
+        "slug": "buyuyen-besikler"
+      }
+    ],
+    "seoTitle": "Beşikler | Ömür Çocuk",
+    "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
   },
   {
     "slug": "sifonyer-komodin",
