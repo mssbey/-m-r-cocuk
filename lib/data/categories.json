@@ -112,6 +112,17 @@
     "seoDescription": ""
   },
   {
+    "name": "Tekstil",
+    "slug": "tekstil",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "tekstil",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Tekstil | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
     "slug": "besikler",
     "name": "Beşikler",
     "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
@@ -126,17 +137,6 @@
     ],
     "seoTitle": "Beşikler | Ömür Çocuk",
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
-    "name": "Tekstil",
-    "slug": "tekstil",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "tekstil",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Tekstil | Ömür Çocuk",
-    "seoDescription": ""
   },
   {
     "slug": "sifonyer-komodin",
