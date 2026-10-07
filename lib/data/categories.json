@@ -163,17 +163,6 @@
     "seoDescription": "Konforlu ve güvenli bebek arabası modelleri. Esenyurt ve Gaziosmanpaşa mağazalarımızda inceleyin."
   },
   {
-    "slug": "kampanyali-urunler",
-    "name": "Kampanyalı Ürünler",
-    "shortDescription": "Güncel fırsatlar ve seçili modeller.",
-    "description": "Mağazalarımızdaki güncel kampanya kapsamındaki ürünler burada listelenir. Kampanya bulunmadığı dönemlerde bu bölüm boş görünebilir.",
-    "imageFolder": "kampanyali-urunler",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Kampanyalı Çocuk Odası Ürünleri | Ömür Çocuk",
-    "seoDescription": "Ömür Çocuk mağazalarındaki güncel kampanyalı ürünler ve fırsatlar."
-  },
-  {
     "name": "Tekstil",
     "slug": "tekstil",
     "description": "",
@@ -183,6 +172,17 @@
     "subcategories": [],
     "seoTitle": "Tekstil | Ömür Çocuk",
     "seoDescription": ""
+  },
+  {
+    "slug": "kampanyali-urunler",
+    "name": "Kampanyalı Ürünler",
+    "shortDescription": "Güncel fırsatlar ve seçili modeller.",
+    "description": "Mağazalarımızdaki güncel kampanya kapsamındaki ürünler burada listelenir. Kampanya bulunmadığı dönemlerde bu bölüm boş görünebilir.",
+    "imageFolder": "kampanyali-urunler",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Kampanyalı Çocuk Odası Ürünleri | Ömür Çocuk",
+    "seoDescription": "Ömür Çocuk mağazalarındaki güncel kampanyalı ürünler ve fırsatlar."
   },
   {
     "name": "Tekli Ürünler",
