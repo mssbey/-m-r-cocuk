@@ -141,17 +141,6 @@
     "seoDescription": "Ömür Çocuk mağazalarındaki güncel kampanyalı ürünler ve fırsatlar."
   },
   {
-    "name": "Çalışma Masası",
-    "slug": "calisma-masasi",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "calisma-masasi",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Çalışma Masası | Ömür Çocuk",
-    "seoDescription": ""
-  },
-  {
     "name": "Dolap",
     "slug": "dolap",
     "description": "",
@@ -160,6 +149,17 @@
     "coverImage": null,
     "subcategories": [],
     "seoTitle": "Dolap | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
+    "name": "Çalışma Masası",
+    "slug": "calisma-masasi",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "calisma-masasi",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Çalışma Masası | Ömür Çocuk",
     "seoDescription": ""
   },
   {
