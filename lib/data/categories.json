@@ -90,6 +90,17 @@
     "seoDescription": ""
   },
   {
+    "name": "Çalışma Masası",
+    "slug": "calisma-masasi",
+    "description": "",
+    "shortDescription": "",
+    "imageFolder": "calisma-masasi",
+    "coverImage": null,
+    "subcategories": [],
+    "seoTitle": "Çalışma Masası | Ömür Çocuk",
+    "seoDescription": ""
+  },
+  {
     "slug": "besikler",
     "name": "Beşikler",
     "shortDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri.",
@@ -104,17 +115,6 @@
     ],
     "seoTitle": "Beşikler | Ömür Çocuk",
     "seoDescription": "Bebeğiniz için büyüyen beşik, sallanır beşik ve çekmeceli beşik modelleri."
-  },
-  {
-    "name": "Çalışma Masası",
-    "slug": "calisma-masasi",
-    "description": "",
-    "shortDescription": "",
-    "imageFolder": "calisma-masasi",
-    "coverImage": null,
-    "subcategories": [],
-    "seoTitle": "Çalışma Masası | Ömür Çocuk",
-    "seoDescription": ""
   },
   {
     "slug": "sifonyer-komodin",
