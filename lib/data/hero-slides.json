@@ -18,15 +18,5 @@
     "href": "/bebek-odalari",
     "name": "Bebek odalarını keşfet",
     "tag": "BEBEK ODALARI"
-  },
-  {
-    "id": "genc",
-    "eyebrow": "KENDİ DÜNYASINI KURSUN",
-    "title": "Onun tarzı.\nOnun odası.",
-    "text": "Çalışmaya, dinlenmeye ve hayal kurmaya yer açan genç odası koleksiyonu.",
-    "image": "/images/uploads/fe50ab0e-ec01-4e6c-bc7e-734a3733478a.webp",
-    "href": "/genc-odalari",
-    "name": "Genç odalarını keşfet",
-    "tag": "GENÇ ODALARI"
   }
 ]
