@@ -5917,15 +5917,9 @@
     "updatedAt": "2026-01-15"
   },
   {
-    "id": "orion-4-kapakli-gardirop-aytasi",
-    "slug": "orion-4-kapakli-gardirop-aytasi",
-    "name": "Orion 4 Kapaklı Gardırop - Aytaşı",
-    "category": "dolap-gardrop",
-    "subcategory": "gardroplar",
     "collection": "orion-aytasi",
     "shortDescription": "Odayı toparlayan geniş hacimli gardırop.",
-    "description": "",
-    "productCode": "DG-005",
+    "description": "Bebek, çocuk ve genç odalarına uygun ölçülerde tasarlanan gardıroplar; düzenli ve ferah bir oda deneyimi sunar.",
     "images": [
       {
         "src": "/images/products/dolap-gardrop/orion-4-kapakli-gardirop-aytasi-01.webp",
@@ -5984,7 +5978,7 @@
     },
     "price": null,
     "oldPrice": null,
-    "campaignLabel": null,
+    "campaignLabel": "",
     "colors": [],
     "dimensions": null,
     "materials": [],
@@ -5992,14 +5986,24 @@
     "optionalParts": [],
     "features": [],
     "careNotes": [],
-    "deliveryInfo": null,
+    "deliveryInfo": "",
     "featured": false,
     "campaign": false,
     "status": "active",
     "seoTitle": "Orion 4 Kapaklı Gardırop - Aytaşı | Ömür Çocuk",
     "seoDescription": "Odayı toparlayan geniş hacimli gardırop.",
+    "id": "orion-4-kapakli-gardirop-aytasi",
+    "slug": "orion-4-kapakli-gardirop-aytasi",
+    "name": "Orion 4 Kapaklı Gardırop - Aytaşı",
+    "category": "dolap",
+    "subcategory": null,
+    "productCode": "DG-005",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-07",
+    "collectionGroup": "luxury-koleksiyon",
+    "fabrics": [],
+    "isNew": false,
+    "parentSet": null
   },
   {
     "id": "orion-4-kapakli-kitaplikli-cekmeceli-gardirop-aytasi",
