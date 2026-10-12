@@ -17,6 +17,7 @@ import { PriceTag } from "@/components/shared/PriceTag";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { FavoriteButton } from "@/components/product/FavoriteButton";
+import { ZoomableImage } from "@/components/shared/ImageLightbox";
 import { getParentSets, getSetPieces, isRoomSet } from "@/lib/room-sets";
 
 export function generateStaticParams() {
@@ -179,13 +180,20 @@ export default async function ProductDetailPage({
             </p>
           ) : null}
 
-          <section className="product-fabric-invite">
-            <p className="shop-eyebrow">RENK / KUMAŞ SEÇİMİ</p>
-            <h2>Kumaş Seçeneklerimiz</h2>
-            <p>Ürünümüzde kullanabileceğimiz kumaş ve renk seçeneklerini inceleyin. Seçiminizin bu modele uygulanabilirliğini birlikte değerlendirelim.</p>
-            <Link href={`/kumas-renk-kartelasi?urun=${encodeURIComponent(product.slug)}`} className="flow-text-link">Kumaş Seçeneklerimizi İncele →</Link>
-            <Link href={`/ozel-uretim?urun=${encodeURIComponent(product.slug)}`} className="flow-text-link">Özel ölçü / tasarım talebi oluştur →</Link>
-          </section>
+          {product.images.length > 0 ? (
+            <ZoomableImage
+              images={product.images}
+              index={product.images.length > 1 ? 1 : 0}
+              sizes="(min-width: 1024px) 480px, 100vw"
+              className="mt-8 aspect-[4/3] rounded-3xl border border-brand-babyblue/30 bg-white"
+            />
+          ) : null}
+          <Link
+            href={`/ozel-uretim?urun=${encodeURIComponent(product.slug)}`}
+            className="flow-text-link mt-4 inline-block"
+          >
+            Özel ölçü / tasarım talebi oluştur →
+          </Link>
 
           {specSections.length > 0 ? (
             <div className="mt-8 flex flex-col gap-6">

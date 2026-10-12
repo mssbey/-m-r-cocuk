@@ -54,6 +54,9 @@ export const siteConfig = {
     /** tel: bağlantıları için normalize edilmiş numara. */
     phoneHref: "tel:+905433115433",
     whatsappNumber: "905433115433",
+    /** Footer'daki "Müşteri Destek" hattı. */
+    supportPhoneDisplay: "0 506 309 09 10",
+    supportPhoneHref: "tel:+905063090910",
     email: null as string | null,
   },
 

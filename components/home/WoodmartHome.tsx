@@ -9,7 +9,7 @@ import { products } from "@/lib/data/products";
 import { isRoomSet } from "@/lib/room-sets";
 import { FavoriteButton } from "@/components/product/FavoriteButton";
 import { PriceTag } from "@/components/shared/PriceTag";
-import { buildDefaultWhatsAppUrl } from "@/lib/whatsapp";
+import { buildDefaultWhatsAppUrl, buildWhatsAppUrl } from "@/lib/whatsapp";
 import { siteConfig } from "@/lib/config";
 
 import { FactoryInvite } from "@/components/shared/FactoryInvite";
@@ -24,6 +24,60 @@ import type { HeroSlide } from "@/lib/admin/catalog-types";
 const slides = heroSlides as HeroSlide[];
 const tabs = ["Öne çıkanlar", "Yeni ürünler", "Kampanyalar"];
 const SLIDE_INTERVAL = 5000;
+// İlk slayt sabit "görüntülü arama" duyurusu; ardından admin slaytları gelir.
+const slideCount = slides.length + 1;
+const videoCallUrl = buildWhatsAppUrl(
+  "Merhaba, mağazanıza gelemiyorum. Ürünlerinizi görüntülü arama ile canlı olarak incelemek istiyorum.",
+);
+const slideSizes =
+  "(min-width: 1232px) 972px, (min-width: 1051px) calc(100vw - 260px), (min-width: 801px) calc(100vw - 210px), calc(100vw - 30px)";
+
+function VideoCallSlide({
+  image,
+  alt,
+  priority,
+}: {
+  image: string;
+  alt: string;
+  priority: boolean;
+}) {
+  return (
+    <div className="shop-hero-picture video-call-slide">
+      <div className="video-call-media">
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes={slideSizes}
+          className="object-cover"
+        />
+      </div>
+      <div className="video-call-content">
+        <p className="video-call-eyebrow">Mağazaya gelemediniz mi?</p>
+        <h1>
+          Ürünlerimizi <span>Görüntülü Arama</span> ile Canlı Olarak
+          İnceleyin!
+        </h1>
+        <p className="video-call-text">
+          Ürünleri canlı görün, detayları yakından inceleyin.
+        </p>
+        <a
+          href={videoCallUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="video-call-button"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 7a2 2 0 012-2h9a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7zm14 3.2l4-2.7v9l-4-2.7v-3.6z" />
+          </svg>
+          Görüntülü Arama Başlat
+          <span aria-hidden="true">›</span>
+        </a>
+      </div>
+    </div>
+  );
+}
 
 function Heading({
   eyebrow,
@@ -49,17 +103,14 @@ export function WoodmartHome() {
   const [tab, setTab] = useState(0);
   const [sliderPaused, setSliderPaused] = useState(false);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
-  const current = slides[slide];
-  const hasCopy = Boolean(
-    current.eyebrow || current.title || current.text || current.name,
-  );
+  const current = slide > 0 ? slides[slide - 1] : null;
   // Slider kendiliğinden ilerler; fareyle üzerine gelince veya odaklanınca
   // durur. Her slayt değişiminde süre baştan başlar.
   useEffect(() => {
-    if (sliderPaused || slides.length < 2) return;
+    if (sliderPaused || slideCount < 2) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const timer = window.setTimeout(
-      () => setSlide((s) => (s + 1) % slides.length),
+      () => setSlide((s) => (s + 1) % slideCount),
       SLIDE_INTERVAL,
     );
     return () => window.clearTimeout(timer);
@@ -123,7 +174,7 @@ export function WoodmartHome() {
               const dy = e.changedTouches[0].clientY - start.y;
               if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy))
                 setSlide(
-                  (slide + (dx < 0 ? 1 : slides.length - 1)) % slides.length,
+                  (slide + (dx < 0 ? 1 : slideCount - 1)) % slideCount,
                 );
             }}
           >
@@ -132,50 +183,28 @@ export function WoodmartHome() {
               key={slide}
               aria-live={sliderPaused ? "polite" : "off"}
             >
-              <Link href={current.href} className="shop-hero-picture">
-                <Image
-                  src={current.image}
-                  alt={
-                    current.name ||
-                    current.title.replace(/\n/g, " ") ||
-                    current.tag ||
-                    "Ömür Çocuk koleksiyonu"
-                  }
-                  fill
-                  priority={slide === 0}
-                  sizes="(min-width: 1232px) 972px, (min-width: 1051px) calc(100vw - 260px), (min-width: 801px) calc(100vw - 210px), calc(100vw - 30px)"
-                  className="object-contain"
-                />
-              </Link>
-              {hasCopy && (
-                <div className="shop-hero-copy">
-                  {current.eyebrow && <p>{current.eyebrow}</p>}
-                  {current.title && (
-                    <h1>
-                      {current.title.split("\n").map((line, i) => (
-                        <span key={i}>
-                          {i > 0 && <br />}
-                          {line}
-                        </span>
-                      ))}
-                    </h1>
-                  )}
-                  {current.text && (
-                    <div className="shop-hero-description">{current.text}</div>
-                  )}
-                  {current.name && (
-                    <Link className="shop-hero-link" href={current.href}>
-                      {current.name} <span aria-hidden="true">›</span>
-                    </Link>
-                  )}
-                </div>
-              )}
+              {/* Her slaytta görüntülü arama çağrısı; arka planda slayt görseli. */}
+              <VideoCallSlide
+                image={
+                  current?.image ??
+                  "/images/products/bebek-odalari/charisma-baby-bebek-odasi-takimi-01.webp"
+                }
+                alt={
+                  current
+                    ? current.name ||
+                      current.title.replace(/\n/g, " ") ||
+                      current.tag ||
+                      "Ömür Çocuk koleksiyonu"
+                    : "Ömür Çocuk bebek odası takımı"
+                }
+                priority={slide === 0}
+              />
             </div>
             <button
               className="shop-slide-arrow shop-slide-prev"
               aria-label="Önceki koleksiyon"
               onClick={() =>
-                setSlide((slide + slides.length - 1) % slides.length)
+                setSlide((slide + slideCount - 1) % slideCount)
               }
             >
               ‹
@@ -183,21 +212,23 @@ export function WoodmartHome() {
             <button
               className="shop-slide-arrow shop-slide-next"
               aria-label="Sonraki koleksiyon"
-              onClick={() => setSlide((slide + 1) % slides.length)}
+              onClick={() => setSlide((slide + 1) % slideCount)}
             >
               ›
             </button>
             <div className="shop-slide-dots">
-              {slides.map((s, i) => (
-                <button
-                  key={s.id}
-                  aria-label={
-                    s.tag ? `${i + 1}. koleksiyon: ${s.tag}` : `${i + 1}. slayt`
-                  }
-                  aria-pressed={i === slide}
-                  onClick={() => setSlide(i)}
-                />
-              ))}
+              {[{ id: "goruntulu-arama", tag: "GÖRÜNTÜLÜ ARAMA" }, ...slides].map(
+                (s, i) => (
+                  <button
+                    key={s.id}
+                    aria-label={
+                      s.tag ? `${i + 1}. slayt: ${s.tag}` : `${i + 1}. slayt`
+                    }
+                    aria-pressed={i === slide}
+                    onClick={() => setSlide(i)}
+                  />
+                ),
+              )}
             </div>
           </div>
         </div>

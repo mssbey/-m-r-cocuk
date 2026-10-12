@@ -56,7 +56,6 @@ export default async function CategoryPage({
           <h1 className="font-display text-3xl text-brand-navy sm:text-4xl">
             {category.name}
           </h1>
-          <p className="mt-3 max-w-2xl text-brand-gray">{category.description}</p>
         </div>
         <div className="relative hidden aspect-[4/3] overflow-hidden rounded-3xl lg:block">
           {category.coverImage ? (

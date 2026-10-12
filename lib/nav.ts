@@ -72,8 +72,6 @@ export const primaryNav: NavItem[] = [
     },
   },
   { label: "Özel Üretim", href: "/ozel-uretim" },
-  { label: "Kumaş & Renk", href: "/kumas-renk-kartelasi" },
-  { label: "Fabrikamız", href: "/fabrikamiz" },
   { label: "İletişim", href: "/iletisim" },
 ];
 
@@ -83,8 +81,6 @@ export const footerCorporateLinks: NavLink[] = [
   { label: "Biz Kimiz", href: "/biz-kimiz" },
   { label: "Koleksiyonlar", href: "/koleksiyonlar" },
   { label: "Özel Üretim", href: "/ozel-uretim" },
-  { label: "Kumaş & Renk Kartelası", href: "/kumas-renk-kartelasi" },
-  { label: "Fabrikamız", href: "/fabrikamiz" },
   { label: "Mağazalarımız", href: "/magazalarimiz" },
   { label: "İletişim", href: "/iletisim" },
   { label: "Sıkça Sorulan Sorular", href: "/sss" },

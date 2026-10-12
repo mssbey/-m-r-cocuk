@@ -114,7 +114,15 @@ export function MobileMenu({
           className="mt-6 flex-1 overflow-y-auto"
           aria-label="Mobil site navigasyonu"
         >
-          {/* Kategoriler en üstte, düz liste (örn. BEBEK ODALARI, MONTESSORİ…). */}
+          <Link
+            href="/"
+            onClick={onClose}
+            className="mb-2 block rounded-xl px-3 py-3 text-base font-medium text-brand-navy transition-colors hover:bg-brand-cream"
+          >
+            Ana Sayfa
+          </Link>
+
+          {/* Kategoriler düz liste (örn. BEBEK ODALARI, MONTESSORİ…). */}
           <ul className="mobile-category-list">
             {categories.map((category) => {
               const subs = category.subcategories;
@@ -168,7 +176,7 @@ export function MobileMenu({
 
           <ul className="mt-3 flex flex-col gap-1">
             {primaryNav
-              .filter((item) => item.href !== "/urunler")
+              .filter((item) => item.href !== "/urunler" && item.href !== "/")
               .map((item) => (
               <li key={item.href}>
                 {item.megaMenu ? (

@@ -6,7 +6,7 @@ import {
   footerCorporateLinks,
   footerLegalLinks,
 } from "@/lib/nav";
-import { buildDefaultWhatsAppUrl } from "@/lib/whatsapp";
+import type { ReactNode } from "react";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -65,31 +65,47 @@ export function Footer() {
 
         <div>
           <h3 className="font-display text-base text-brand-navy">İletişim</h3>
-          <ul className="mt-4 flex flex-col gap-2.5 text-sm text-brand-gray">
-            <li>
-              <a href={siteConfig.contact.phoneHref} className="transition-colors hover:text-brand-navy">
-                {siteConfig.contact.phoneDisplay}
-              </a>
-            </li>
-            <li>
-              <a
-                href={buildDefaultWhatsAppUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors hover:text-brand-navy"
-              >
-                WhatsApp&apos;tan Yazın
-              </a>
-            </li>
+          <ul className="mt-4 flex flex-col gap-4">
+            <FooterContact
+              href={siteConfig.contact.supportPhoneHref}
+              label="Müşteri Destek"
+              value={siteConfig.contact.supportPhoneDisplay}
+              icon={
+                <path
+                  d="M4 13v-1a8 8 0 0116 0v1M4 13a2 2 0 012-2h1v6H6a2 2 0 01-2-2v-2zm16 0a2 2 0 00-2-2h-1v6h1a2 2 0 002-2v-2zm-3 4v1a3 3 0 01-3 3h-2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              }
+            />
+            <FooterContact
+              href={siteConfig.contact.phoneHref}
+              label="Mağaza Hattı"
+              value={siteConfig.contact.phoneDisplay}
+              icon={
+                <path
+                  d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              }
+            />
             {siteConfig.stores.map((store) => (
-              <li key={store.id}>
-                <Link
-                  href={`/magazalarimiz#${store.id}`}
-                  className="transition-colors hover:text-brand-navy"
-                >
-                  {store.shortName}
-                </Link>
-              </li>
+              <FooterContact
+                key={store.id}
+                href={`/magazalarimiz#${store.id}`}
+                label={store.shortName}
+                value={`${store.district} / ${store.city}`}
+                icon={
+                  <>
+                    <path
+                      d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"
+                      strokeLinejoin="round"
+                    />
+                    <circle cx="12" cy="10" r="2.5" />
+                  </>
+                }
+              />
             ))}
           </ul>
         </div>
@@ -111,6 +127,62 @@ export function Footer() {
           </ul>
         </div>
       </div>
+
+      <div className="relative border-t border-brand-babyblue/30">
+        <p className="container-brand py-4 text-center text-xs text-brand-gray">
+          Zeynart Web Bilişim tarafından yapılmıştır.
+        </p>
+        <div className="footer-mss" aria-hidden="true">
+          <span>MSS</span>
+        </div>
+      </div>
     </footer>
+  );
+}
+
+function FooterContact({
+  href,
+  label,
+  value,
+  icon,
+}: {
+  href: string;
+  label: string;
+  value: string;
+  icon: ReactNode;
+}) {
+  const content = (
+    <>
+      <span className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-brand-navy text-white">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.8}
+          className="h-5 w-5"
+          aria-hidden="true"
+        >
+          {icon}
+        </svg>
+      </span>
+      <span className="flex flex-col">
+        <span className="text-xs text-brand-gray">{label}</span>
+        <span className="text-base font-semibold text-brand-navy">{value}</span>
+      </span>
+    </>
+  );
+  const className = "group flex items-center gap-3 transition-opacity hover:opacity-80";
+  return (
+    <li>
+      {href.startsWith("/") ? (
+        <Link href={href} className={className}>
+          {content}
+        </Link>
+      ) : (
+        <a href={href} className={className}>
+          {content}
+        </a>
+      )}
+    </li>
   );
 }

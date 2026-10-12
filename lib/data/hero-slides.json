@@ -1,22 +1,22 @@
 [
   {
-    "id": "montessori",
-    "eyebrow": "ÖMÜR ÇOCUK KOLEKSİYONU",
-    "title": "Küçük odalar.\nBüyük hayaller.",
-    "text": "İlk uykusundan en güzel hayallerine, birlikte büyüyen yaşam alanları.",
-    "image": "/images/uploads/31389b0f-02f2-4ab0-9fcc-32a71edf9675.webp",
-    "href": "/montessori-odalari",
-    "name": "Montessori odalarını keşfet",
-    "tag": "MONTESSORİ"
+    "id": "minik-hayaller",
+    "eyebrow": "",
+    "title": "",
+    "text": "",
+    "image": "/images/uploads/5b0e7c1a-3f42-4d8e-9a61-2c7f1e9b4a01.webp",
+    "href": "/bebek-odalari",
+    "name": "Minik hayallere sıcacık bir başlangıç",
+    "tag": "BEBEK ODALARI"
   },
   {
-    "id": "bebek",
-    "eyebrow": "HAYATIN EN GÜZEL BAŞLANGICI",
-    "title": "İlk odası.\nİlk dünyası.",
-    "text": "Bebeğinizin odasına sıcaklık katan, her detayı özenle seçilmiş mobilyalar.",
-    "image": "/images/uploads/7765d650-d023-435b-b9c2-bbb4a10e0057.webp",
-    "href": "/bebek-odalari",
-    "name": "Bebek odalarını keşfet",
-    "tag": "BEBEK ODALARI"
+    "id": "iki-kat-konfor",
+    "eyebrow": "",
+    "title": "",
+    "text": "",
+    "image": "/images/uploads/8d2f4a6b-91c3-4e57-b0a8-6f3d2e1c7b02.webp",
+    "href": "/cocuk-odalari",
+    "name": "Bir yatak, iki kat konfor",
+    "tag": "ÇOCUK ODALARI"
   }
 ]

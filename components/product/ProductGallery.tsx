@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import type { ProductImage } from "@/lib/types";
 import { PlaceholderImage } from "@/components/shared/PlaceholderImage";
+import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { cn } from "@/lib/utils";
 
 export function ProductGallery({
@@ -14,6 +15,7 @@ export function ProductGallery({
   productName: string;
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [zoomed, setZoomed] = useState(false);
   const touchStartX = useRef<number | null>(null);
 
   if (images.length === 0) {
@@ -50,14 +52,21 @@ export function ProductGallery({
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        <Image
-          src={active.src}
-          alt={active.alt}
-          fill
-          priority
-          sizes="(min-width: 1024px) 560px, 100vw"
-          className="object-contain"
-        />
+        <button
+          type="button"
+          onClick={() => setZoomed(true)}
+          aria-label="Görseli büyüt"
+          className="absolute inset-0 cursor-zoom-in"
+        >
+          <Image
+            src={active.src}
+            alt={active.alt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 560px, 100vw"
+            className="object-contain"
+          />
+        </button>
 
         {images.length > 1 ? (
           <>
@@ -116,6 +125,14 @@ export function ProductGallery({
             </button>
           ))}
         </div>
+      ) : null}
+
+      {zoomed ? (
+        <ImageLightbox
+          images={images}
+          startIndex={activeIndex}
+          onClose={() => setZoomed(false)}
+        />
       ) : null}
     </div>
   );
