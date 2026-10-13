@@ -10,6 +10,7 @@ import { MobileFilterDrawer } from "@/components/product/MobileFilterDrawer";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { EmptyState } from "@/components/product/EmptyState";
 import { cn } from "@/lib/utils";
+import { isRoomSet, hasRoomOverview } from "@/lib/room-sets";
 
 const DEFAULT_FILTERS: CatalogFilterValue = {
   query: "",
@@ -70,13 +71,18 @@ export function ProductCatalog({
   const hasPriceData = categoryScopedProducts.some((p) => p.price !== null);
 
   const results = useMemo(() => {
-    return searchProducts({
+    const matches = searchProducts({
       query: filters.query,
       category: activeCategory,
       subcategory: filters.subcategory !== "all" ? filters.subcategory : undefined,
       color: filters.color !== "all" ? filters.color : undefined,
       sort: filters.sort,
     }).filter((p) => products.some((sourceProduct) => sourceProduct.id === p.id));
+    const roomCategory = ["genc-odalari", "cocuk-odalari", "bebek-odalari"].includes(activeCategory ?? "");
+    if (roomCategory && filters.subcategory === "all" && !filters.query) {
+      return matches.filter(isRoomSet).sort((a, b) => Number(hasRoomOverview(b)) - Number(hasRoomOverview(a)));
+    }
+    return matches;
   }, [filters, activeCategory, products]);
 
   const isFiltered =

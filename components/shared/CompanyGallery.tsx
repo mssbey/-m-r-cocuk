@@ -14,7 +14,7 @@ export function CompanyGallery({
     <section
       className="my-10"
       aria-label={
-        category === "factory" ? "Fabrikamız" : "Fabrika ve teslimatlar"
+        category === "factory" ? "Mağazamız" : "Mağaza ve teslimatlar"
       }
     >
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -43,7 +43,7 @@ export default async function CustomProductionPage({
             <li>Talebinizi WhatsApp üzerinden paylaşın.</li>
           </ol>
           <Link href="/fabrikamiz" className="flow-text-link">
-            Üretimi yerinde görün →
+            Ürünleri mağazamızda görün →
           </Link>
         </aside>
         <CustomProductionForm

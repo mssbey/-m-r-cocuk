@@ -6,14 +6,14 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { PageIntro } from "@/components/shared/PageIntro";
 
 export const metadata = buildMetadata({
-  title: "Fabrikamız",
+  title: "Mağazamız",
   description: factory.description,
   path: "/fabrikamiz",
 });
 export default function FactoryPage() {
   return (
     <div className="container-brand flow-page">
-      <PageIntro title="Fabrikamız" description={factory.title} />
+      <PageIntro title="Mağazamız" description={factory.title} />
       <div className="factory-details">
         <div>
           <p className="flow-lead">{factory.description}</p>
@@ -37,7 +37,7 @@ export default function FactoryPage() {
         </div>
         <aside className="factory-visit">
           <p className="shop-eyebrow">SİZİ AĞIRLAMAK İSTERİZ</p>
-          <h2>Üretim tesisimize gelin.</h2>
+          <h2>Mağazamıza gelin.</h2>
           {factory.address ? (
             <p>{factory.address}</p>
           ) : (
@@ -48,7 +48,7 @@ export default function FactoryPage() {
           )}
           <a
             href={buildWhatsAppUrl(
-              "Merhaba, Ömür Çocuk üretim tesisini ziyaret etmek istiyorum. Adres ve randevu bilgisi alabilir miyim?",
+              "Merhaba, Ömür Çocuk mağazasını ziyaret etmek istiyorum. Adres ve randevu bilgisi alabilir miyim?",
             )}
             className="shop-button"
             target="_blank"
@@ -65,7 +65,7 @@ export default function FactoryPage() {
         </aside>
       </div>
       {factory.photos.length > 0 && (
-        <section className="factory-gallery" aria-label="Üretim tesisimiz">
+        <section className="factory-gallery" aria-label="Mağazamız">
           {factory.photos.map((photo) => (
             <figure key={photo.src}>
               <Image src={photo.src} alt={photo.alt} width={900} height={675} />

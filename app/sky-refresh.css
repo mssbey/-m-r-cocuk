@@ -343,3 +343,7 @@
 @media (prefers-reduced-motion: reduce) {
   .footer-mss span { left: auto; right: 12px; animation: none; }
 }
+
+.shop-montessori-banner { margin-block: 48px; }
+.shop-montessori-banner a { display: block; overflow: hidden; border-radius: 24px; }
+.shop-montessori-banner img { display: block; width: 100%; height: auto; }

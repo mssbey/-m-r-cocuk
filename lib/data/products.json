@@ -175,6 +175,24 @@
     "productCode": "GO-002",
     "images": [
       {
+        "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-09.webp",
+        "alt": "Canyon Art Genç Odası Takımı - 9. görsel",
+        "width": 2000,
+        "height": 1324
+      },
+      {
+        "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-11.webp",
+        "alt": "Canyon Art Genç Odası Takımı - 11. görsel",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-03.webp",
+        "alt": "Canyon Art Genç Odası Takımı - 3. görsel",
+        "width": 2000,
+        "height": 1333
+      },
+      {
         "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-01.webp",
         "alt": "Canyon Art Genç Odası Takımı - 1. görsel",
         "width": 2000,
@@ -183,12 +201,6 @@
       {
         "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-02.webp",
         "alt": "Canyon Art Genç Odası Takımı - 2. görsel",
-        "width": 2000,
-        "height": 1333
-      },
-      {
-        "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-03.webp",
-        "alt": "Canyon Art Genç Odası Takımı - 3. görsel",
         "width": 2000,
         "height": 1333
       },
@@ -223,20 +235,8 @@
         "height": 1333
       },
       {
-        "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-09.webp",
-        "alt": "Canyon Art Genç Odası Takımı - 9. görsel",
-        "width": 2000,
-        "height": 1324
-      },
-      {
         "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-10.webp",
         "alt": "Canyon Art Genç Odası Takımı - 10. görsel",
-        "width": 2000,
-        "height": 1333
-      },
-      {
-        "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-11.webp",
-        "alt": "Canyon Art Genç Odası Takımı - 11. görsel",
         "width": 2000,
         "height": 1333
       },
@@ -434,10 +434,10 @@
       }
     ],
     "coverImage": {
-      "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-01.webp",
-      "alt": "Canyon Art Genç Odası Takımı - 1. görsel",
+      "src": "/images/products/genc-odalari/canyon-art-genc-odasi-takimi-09.webp",
+      "alt": "Canyon Art Genç Odası Takımı - 9. görsel",
       "width": 2000,
-      "height": 1333
+      "height": 1324
     },
     "price": null,
     "oldPrice": null,
@@ -456,7 +456,7 @@
     "seoTitle": "Canyon Art Genç Odası Takımı | Ömür Çocuk",
     "seoDescription": "Gençlerin tarzına uygun fonksiyonel bir genç odası takımı.",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-13"
   },
   {
     "id": "charisma-genc-odasi-takimi",
@@ -826,6 +826,30 @@
     "productCode": "GO-004",
     "images": [
       {
+        "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-09.webp",
+        "alt": "Lofter Genç Odası Takımı - 9. görsel",
+        "width": 2000,
+        "height": 1497
+      },
+      {
+        "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-11.webp",
+        "alt": "Lofter Genç Odası Takımı - 11. görsel",
+        "width": 2000,
+        "height": 1500
+      },
+      {
+        "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-13.webp",
+        "alt": "Lofter Genç Odası Takımı - 13. görsel",
+        "width": 2000,
+        "height": 1546
+      },
+      {
+        "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-14.webp",
+        "alt": "Lofter Genç Odası Takımı - 14. görsel",
+        "width": 2000,
+        "height": 1500
+      },
+      {
         "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-01.webp",
         "alt": "Lofter Genç Odası Takımı - 1. görsel",
         "width": 2000,
@@ -874,38 +898,14 @@
         "height": 1500
       },
       {
-        "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-09.webp",
-        "alt": "Lofter Genç Odası Takımı - 9. görsel",
-        "width": 2000,
-        "height": 1497
-      },
-      {
         "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-10.webp",
         "alt": "Lofter Genç Odası Takımı - 10. görsel",
         "width": 2000,
         "height": 1500
       },
       {
-        "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-11.webp",
-        "alt": "Lofter Genç Odası Takımı - 11. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
         "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-12.webp",
         "alt": "Lofter Genç Odası Takımı - 12. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
-        "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-13.webp",
-        "alt": "Lofter Genç Odası Takımı - 13. görsel",
-        "width": 2000,
-        "height": 1546
-      },
-      {
-        "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-14.webp",
-        "alt": "Lofter Genç Odası Takımı - 14. görsel",
         "width": 2000,
         "height": 1500
       },
@@ -1061,10 +1061,10 @@
       }
     ],
     "coverImage": {
-      "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-01.webp",
-      "alt": "Lofter Genç Odası Takımı - 1. görsel",
+      "src": "/images/products/genc-odalari/lofter-genc-odasi-takimi-09.webp",
+      "alt": "Lofter Genç Odası Takımı - 9. görsel",
       "width": 2000,
-      "height": 1500
+      "height": 1497
     },
     "price": null,
     "oldPrice": null,
@@ -1083,7 +1083,7 @@
     "seoTitle": "Lofter Genç Odası Takımı | Ömür Çocuk",
     "seoDescription": "Gençlerin tarzına uygun fonksiyonel bir genç odası takımı.",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-13"
   },
   {
     "id": "lofter-baby-bebek-odasi-takimi",
@@ -1207,6 +1207,24 @@
     "productCode": "GO-005",
     "images": [
       {
+        "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-09.webp",
+        "alt": "Neon Genç Odası Takımı - 9. görsel",
+        "width": 2000,
+        "height": 1392
+      },
+      {
+        "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-10.webp",
+        "alt": "Neon Genç Odası Takımı - 10. görsel",
+        "width": 2000,
+        "height": 1528
+      },
+      {
+        "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-14.webp",
+        "alt": "Neon Genç Odası Takımı - 14. görsel",
+        "width": 2000,
+        "height": 1500
+      },
+      {
         "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-01.webp",
         "alt": "Neon Genç Odası Takımı - 1. görsel",
         "width": 2000,
@@ -1255,18 +1273,6 @@
         "height": 1610
       },
       {
-        "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-09.webp",
-        "alt": "Neon Genç Odası Takımı - 9. görsel",
-        "width": 2000,
-        "height": 1392
-      },
-      {
-        "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-10.webp",
-        "alt": "Neon Genç Odası Takımı - 10. görsel",
-        "width": 2000,
-        "height": 1528
-      },
-      {
         "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-11.webp",
         "alt": "Neon Genç Odası Takımı - 11. görsel",
         "width": 1500,
@@ -1281,12 +1287,6 @@
       {
         "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-13.webp",
         "alt": "Neon Genç Odası Takımı - 13. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
-        "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-14.webp",
-        "alt": "Neon Genç Odası Takımı - 14. görsel",
         "width": 2000,
         "height": 1500
       },
@@ -1472,10 +1472,10 @@
       }
     ],
     "coverImage": {
-      "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-01.webp",
-      "alt": "Neon Genç Odası Takımı - 1. görsel",
+      "src": "/images/products/genc-odalari/neon-genc-odasi-takimi-09.webp",
+      "alt": "Neon Genç Odası Takımı - 9. görsel",
       "width": 2000,
-      "height": 1500
+      "height": 1392
     },
     "price": null,
     "oldPrice": null,
@@ -1494,7 +1494,7 @@
     "seoTitle": "Neon Genç Odası Takımı | Ömür Çocuk",
     "seoDescription": "Gençlerin tarzına uygun fonksiyonel bir genç odası takımı.",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-13"
   },
   {
     "id": "plato-genc-odasi-takimi",
@@ -1739,6 +1739,30 @@
     "productCode": "GO-009",
     "images": [
       {
+        "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-08.webp",
+        "alt": "Sahra Genç Odası Takımı - 8. görsel",
+        "width": 2000,
+        "height": 1446
+      },
+      {
+        "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-09.webp",
+        "alt": "Sahra Genç Odası Takımı - 9. görsel",
+        "width": 2000,
+        "height": 1401
+      },
+      {
+        "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-13.webp",
+        "alt": "Sahra Genç Odası Takımı - 13. görsel",
+        "width": 2000,
+        "height": 1500
+      },
+      {
+        "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-14.webp",
+        "alt": "Sahra Genç Odası Takımı - 14. görsel",
+        "width": 2000,
+        "height": 1500
+      },
+      {
         "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-01.webp",
         "alt": "Sahra Genç Odası Takımı - 1. görsel",
         "width": 2000,
@@ -1781,18 +1805,6 @@
         "height": 1500
       },
       {
-        "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-08.webp",
-        "alt": "Sahra Genç Odası Takımı - 8. görsel",
-        "width": 2000,
-        "height": 1446
-      },
-      {
-        "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-09.webp",
-        "alt": "Sahra Genç Odası Takımı - 9. görsel",
-        "width": 2000,
-        "height": 1401
-      },
-      {
         "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-10.webp",
         "alt": "Sahra Genç Odası Takımı - 10. görsel",
         "width": 2000,
@@ -1807,18 +1819,6 @@
       {
         "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-12.webp",
         "alt": "Sahra Genç Odası Takımı - 12. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
-        "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-13.webp",
-        "alt": "Sahra Genç Odası Takımı - 13. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
-        "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-14.webp",
-        "alt": "Sahra Genç Odası Takımı - 14. görsel",
         "width": 2000,
         "height": 1500
       },
@@ -1914,10 +1914,10 @@
       }
     ],
     "coverImage": {
-      "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-01.webp",
-      "alt": "Sahra Genç Odası Takımı - 1. görsel",
+      "src": "/images/products/genc-odalari/sahra-genc-odasi-takimi-08.webp",
+      "alt": "Sahra Genç Odası Takımı - 8. görsel",
       "width": 2000,
-      "height": 1500
+      "height": 1446
     },
     "price": null,
     "oldPrice": null,
@@ -1936,7 +1936,7 @@
     "seoTitle": "Sahra Genç Odası Takımı | Ömür Çocuk",
     "seoDescription": "Gençlerin tarzına uygun fonksiyonel bir genç odası takımı.",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-13"
   },
   {
     "id": "sahra-baby-bebek-odasi-takimi",
@@ -1949,6 +1949,18 @@
     "description": "",
     "productCode": "BO-005",
     "images": [
+      {
+        "src": "/images/products/bebek-odalari/sahra-baby-bebek-odasi-takimi-05.webp",
+        "alt": "Sahra Baby Bebek Odası Takımı - 5. görsel",
+        "width": 2000,
+        "height": 1500
+      },
+      {
+        "src": "/images/products/bebek-odalari/sahra-baby-bebek-odasi-takimi-06.webp",
+        "alt": "Sahra Baby Bebek Odası Takımı - 6. görsel",
+        "width": 2000,
+        "height": 1500
+      },
       {
         "src": "/images/products/bebek-odalari/sahra-baby-bebek-odasi-takimi-01.webp",
         "alt": "Sahra Baby Bebek Odası Takımı - 1. görsel",
@@ -1974,18 +1986,6 @@
         "height": 1500
       },
       {
-        "src": "/images/products/bebek-odalari/sahra-baby-bebek-odasi-takimi-05.webp",
-        "alt": "Sahra Baby Bebek Odası Takımı - 5. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
-        "src": "/images/products/bebek-odalari/sahra-baby-bebek-odasi-takimi-06.webp",
-        "alt": "Sahra Baby Bebek Odası Takımı - 6. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
         "src": "/images/products/bebek-odalari/sahra-baby-bebek-odasi-takimi-07.webp",
         "alt": "Sahra Baby Bebek Odası Takımı - 7. görsel",
         "width": 2000,
@@ -1999,8 +1999,8 @@
       }
     ],
     "coverImage": {
-      "src": "/images/products/bebek-odalari/sahra-baby-bebek-odasi-takimi-01.webp",
-      "alt": "Sahra Baby Bebek Odası Takımı - 1. görsel",
+      "src": "/images/products/bebek-odalari/sahra-baby-bebek-odasi-takimi-05.webp",
+      "alt": "Sahra Baby Bebek Odası Takımı - 5. görsel",
       "width": 2000,
       "height": 1500
     },
@@ -2021,7 +2021,7 @@
     "seoTitle": "Sahra Baby Bebek Odası Takımı | Ömür Çocuk",
     "seoDescription": "Bebeğinizin ilk odası için güvenli ve şık bir bebek odası takımı.",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-13"
   },
   {
     "id": "smarter-genc-odasi-takimi",
@@ -2808,6 +2808,12 @@
     "productCode": "GO-014",
     "images": [
       {
+        "src": "/images/products/genc-odalari/vizyon-genc-odasi-takimi-14.webp",
+        "alt": "Vizyon Genç Odası Takımı - 14. görsel",
+        "width": 2000,
+        "height": 1500
+      },
+      {
         "src": "/images/products/genc-odalari/vizyon-genc-odasi-takimi-01.webp",
         "alt": "Vizyon Genç Odası Takımı - 1. görsel",
         "width": 2000,
@@ -2882,12 +2888,6 @@
       {
         "src": "/images/products/genc-odalari/vizyon-genc-odasi-takimi-13.webp",
         "alt": "Vizyon Genç Odası Takımı - 13. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
-        "src": "/images/products/genc-odalari/vizyon-genc-odasi-takimi-14.webp",
-        "alt": "Vizyon Genç Odası Takımı - 14. görsel",
         "width": 2000,
         "height": 1500
       },
@@ -3145,8 +3145,8 @@
       }
     ],
     "coverImage": {
-      "src": "/images/products/genc-odalari/vizyon-genc-odasi-takimi-01.webp",
-      "alt": "Vizyon Genç Odası Takımı - 1. görsel",
+      "src": "/images/products/genc-odalari/vizyon-genc-odasi-takimi-14.webp",
+      "alt": "Vizyon Genç Odası Takımı - 14. görsel",
       "width": 2000,
       "height": 1500
     },
@@ -3167,7 +3167,7 @@
     "seoTitle": "Vizyon Genç Odası Takımı | Ömür Çocuk",
     "seoDescription": "Gençlerin tarzına uygun fonksiyonel bir genç odası takımı.",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-13"
   },
   {
     "id": "vizyon-baby-bebek-odasi-takimi",
@@ -3260,6 +3260,12 @@
     "productCode": "GO-015",
     "images": [
       {
+        "src": "/images/products/genc-odalari/inci-genc-odasi-takimi-16.webp",
+        "alt": "İnci Genç Odası Takımı - 16. görsel",
+        "width": 2000,
+        "height": 1500
+      },
+      {
         "src": "/images/products/genc-odalari/inci-genc-odasi-takimi-01.webp",
         "alt": "İnci Genç Odası Takımı - 1. görsel",
         "width": 2000,
@@ -3346,12 +3352,6 @@
       {
         "src": "/images/products/genc-odalari/inci-genc-odasi-takimi-15.webp",
         "alt": "İnci Genç Odası Takımı - 15. görsel",
-        "width": 2000,
-        "height": 1500
-      },
-      {
-        "src": "/images/products/genc-odalari/inci-genc-odasi-takimi-16.webp",
-        "alt": "İnci Genç Odası Takımı - 16. görsel",
         "width": 2000,
         "height": 1500
       },
@@ -3501,8 +3501,8 @@
       }
     ],
     "coverImage": {
-      "src": "/images/products/genc-odalari/inci-genc-odasi-takimi-01.webp",
-      "alt": "İnci Genç Odası Takımı - 1. görsel",
+      "src": "/images/products/genc-odalari/inci-genc-odasi-takimi-16.webp",
+      "alt": "İnci Genç Odası Takımı - 16. görsel",
       "width": 2000,
       "height": 1500
     },
@@ -3523,7 +3523,7 @@
     "seoTitle": "İnci Genç Odası Takımı | Ömür Çocuk",
     "seoDescription": "Gençlerin tarzına uygun fonksiyonel bir genç odası takımı.",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-13"
   },
   {
     "id": "inci-baby-bebek-odasi-takimi",
@@ -3536,6 +3536,12 @@
     "description": "",
     "productCode": "BO-008",
     "images": [
+      {
+        "src": "/images/products/bebek-odalari/inci-baby-bebek-odasi-takimi-11.webp",
+        "alt": "İnci Baby Bebek Odası Takımı - 11. görsel",
+        "width": 2000,
+        "height": 1392
+      },
       {
         "src": "/images/products/bebek-odalari/inci-baby-bebek-odasi-takimi-01.webp",
         "alt": "İnci Baby Bebek Odası Takımı - 1. görsel",
@@ -3595,19 +3601,13 @@
         "alt": "İnci Baby Bebek Odası Takımı - 10. görsel",
         "width": 2000,
         "height": 1500
-      },
-      {
-        "src": "/images/products/bebek-odalari/inci-baby-bebek-odasi-takimi-11.webp",
-        "alt": "İnci Baby Bebek Odası Takımı - 11. görsel",
-        "width": 2000,
-        "height": 1392
       }
     ],
     "coverImage": {
-      "src": "/images/products/bebek-odalari/inci-baby-bebek-odasi-takimi-01.webp",
-      "alt": "İnci Baby Bebek Odası Takımı - 1. görsel",
+      "src": "/images/products/bebek-odalari/inci-baby-bebek-odasi-takimi-11.webp",
+      "alt": "İnci Baby Bebek Odası Takımı - 11. görsel",
       "width": 2000,
-      "height": 1500
+      "height": 1392
     },
     "price": null,
     "oldPrice": null,
@@ -3626,7 +3626,7 @@
     "seoTitle": "İnci Baby Bebek Odası Takımı | Ömür Çocuk",
     "seoDescription": "Bebeğinizin ilk odası için güvenli ve şık bir bebek odası takımı.",
     "createdAt": "2026-01-15",
-    "updatedAt": "2026-01-15"
+    "updatedAt": "2026-10-13"
   },
   {
     "id": "nest-3-kapili-bebek-odasi",

@@ -7,18 +7,18 @@ export function FactoryInvite() {
   return (
     <section className="factory-invite">
       <div className="container-brand">
-        <p className="shop-eyebrow">DOĞRUDAN ÜRETİCİNİZLE TANIŞIN</p>
+        <p className="shop-eyebrow">MAĞAZAMIZDA TANIŞALIM</p>
         <h2>{factory.title}</h2>
         <p>{factory.description}</p>
         <CompanyGallery category="factory" />
         <div className="flow-actions">
           <Link className="shop-button" href="/fabrikamiz">
-            Fabrikamızı Ziyaret Edin
+            Mağazamızı Ziyaret Edin
           </Link>
           <a
             className="shop-outline-button"
             href={buildWhatsAppUrl(
-              "Merhaba, üretim tesisinizi ziyaret edip ürünleri ve kumaşları incelemek istiyorum. Ziyaret için bilgi alabilir miyim?",
+              "Merhaba, mağazanızı ziyaret edip ürünleri ve kumaşları incelemek istiyorum. Ziyaret için bilgi alabilir miyim?",
             )}
             target="_blank"
             rel="noopener noreferrer"

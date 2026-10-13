@@ -13,6 +13,18 @@ export function isRoomSet(product: Product): boolean {
   return Boolean(product.subcategory?.endsWith("-takimlari"));
 }
 
+// These imported sets currently only have individual furniture photographs.
+export function hasRoomOverview(product: Product): boolean {
+  return ![
+    "armin-genc-odasi-takimi",
+    "milas-baby-bebek-odasi-takimi",
+    "plato-genc-odasi-takimi",
+    "smarter-genc-odasi-takimi",
+    "storm-genc-odasi-takimi",
+    "nest-3-kapili-bebek-odasi",
+  ].includes(product.slug);
+}
+
 export function getSetPieces(set: Product, all: Product[]): Product[] {
   return all.filter(
     (p) =>

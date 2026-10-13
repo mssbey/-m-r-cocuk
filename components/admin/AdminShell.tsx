@@ -30,7 +30,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <nav aria-label="Yönetim menüsü">
           <Link href="/admin/slider/">Ana Sayfa Slider</Link>
           <Link href="/admin/taxonomy/">Kategoriler ve Koleksiyonlar</Link>
-          <Link href="/admin/gallery/">Fabrika ve Teslimatlar</Link>
+          <Link href="/admin/gallery/">Mağaza ve Teslimatlar</Link>
           <Link href="/admin/products/new/">+ Yeni Ürün</Link>
           <Link href="/" target="_blank" rel="noopener noreferrer">
             Siteyi Görüntüle

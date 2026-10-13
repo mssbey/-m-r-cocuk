@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
-import { PlaceholderImage } from "@/components/shared/PlaceholderImage";
 import { DecorativeDivider } from "@/components/shared/DecorativeDivider";
 import { FactoryInvite } from "@/components/shared/FactoryInvite";
 import { CompanyGallery } from "@/components/shared/CompanyGallery";
@@ -18,7 +17,7 @@ export default function AboutPage() {
     <div className="container-brand py-10 sm:py-14">
       <Breadcrumbs items={[{ name: "Biz Kimiz" }]} />
 
-      <div className="mt-6 grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      <div className="mt-6 grid grid-cols-1 items-center gap-10 lg:gap-16">
         <div>
           <h1 className="font-display text-3xl text-brand-navy sm:text-4xl">
             Biz Kimiz
@@ -55,10 +54,6 @@ export default function AboutPage() {
               Ömür Çocuk – Onların dünyasına yakışan odalar.
             </p>
           </div>
-        </div>
-
-        <div className="relative aspect-[4/5] overflow-hidden rounded-3xl soft-shadow-lg">
-          <PlaceholderImage label="Mağaza görseli yakında" icon="house" />
         </div>
       </div>
 

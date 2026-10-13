@@ -7,10 +7,10 @@ export default function GalleryEditor() {
   const c = useCatalog();
   return (
     <>
-      <h1 className="admin-heading">Fabrika ve Teslimatlar</h1>
+      <h1 className="admin-heading">Mağaza ve Teslimatlar</h1>
       <p className="admin-intro">
-        Fotoğraflar Biz Kimiz sayfasında yayınlanır. Fabrika fotoğrafları ana
-        sayfa ve Fabrikamız sayfasında da gösterilir.
+        Fotoğraflar Biz Kimiz sayfasında yayınlanır. Mağaza fotoğrafları ana
+        sayfa ve Mağazamız sayfasında da gösterilir.
       </p>
       {!c.catalog ? (
         <p role={c.error ? "alert" : "status"}>{c.error || "Yükleniyor…"}</p>
@@ -94,7 +94,7 @@ function GalleryCard({
           <label>
             <span>Kategori</span>
             <select name="category" defaultValue={item?.category || "factory"}>
-              <option value="factory">Fabrikamız</option>
+              <option value="factory">Mağazamız</option>
               <option value="delivery">Teslimatlarımız</option>
             </select>
           </label>
@@ -134,7 +134,7 @@ function GalleryCard({
           </label>
           <p className="admin-help">
             JPG, PNG veya WEBP · En fazla 3 MB. Yalnızca paylaşım izniniz olan
-            gerçek fabrika ve teslimat fotoğraflarını yükleyin.
+            gerçek ma?aza ve teslimat fotoğraflarını yükleyin.
           </p>
           <button className="admin-button">
             {pending === "save"

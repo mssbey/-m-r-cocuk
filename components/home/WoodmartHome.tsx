@@ -187,7 +187,7 @@ export function WoodmartHome() {
               <VideoCallSlide
                 image={
                   current?.image ??
-                  "/images/products/bebek-odalari/charisma-baby-bebek-odasi-takimi-01.webp"
+                  "/images/editorial/anne-bebek-goruntulu-arama.webp"
                 }
                 alt={
                   current
@@ -195,7 +195,7 @@ export function WoodmartHome() {
                       current.title.replace(/\n/g, " ") ||
                       current.tag ||
                       "Ömür Çocuk koleksiyonu"
-                    : "Ömür Çocuk bebek odası takımı"
+                    : "Kucağında bebeğiyle telefonundan görüntülü görüşme yapan anne"
                 }
                 priority={slide === 0}
               />
@@ -386,43 +386,10 @@ export function WoodmartHome() {
           </Link>
         </div>
       </section>
-      <section className="shop-spotlight">
-        <div className="container-brand shop-spotlight-inner">
-          <div className="shop-spotlight-image">
-            <Image
-              src="/images/products/montessori-odalari/vera-montessori-transparent.png"
-              alt="Vera Montessori çatılı yatak"
-              fill
-              sizes="(min-width: 900px) 55vw, 100vw"
-              className="object-contain"
-            />
-          </div>
-          <div className="shop-spotlight-copy">
-            <p className="shop-eyebrow">BİR ODADAN DAHA FAZLASI</p>
-            <h2>
-              Montessori.
-              <br />
-              Keşfetmeye yer açın.
-            </h2>
-            <dl>
-              <div>
-                <dt>KOLEKSİYON</dt>
-                <dd>Montessori Odaları</dd>
-              </div>
-              <div>
-                <dt>YAŞAM ALANI</dt>
-                <dd>Oyun, uyku ve hayaller</dd>
-              </div>
-              <div>
-                <dt>MARKA</dt>
-                <dd>Ömür Çocuk</dd>
-              </div>
-            </dl>
-            <Link href="/montessori-odalari" className="shop-button">
-              KOLEKSİYONU İNCELE →
-            </Link>
-          </div>
-        </div>
+      <section className="container-brand shop-montessori-banner">
+        <Link href="/montessori" aria-label="Montessori yatakları inceleyin">
+          <Image src="/images/editorial/montessori-dream.webp" alt="Montessori yataklı, aydınlık çocuk odası konsepti" width={1536} height={1024} sizes="(min-width: 1232px) 1200px, 100vw" />
+        </Link>
       </section>
       <section className="container-brand shop-about">
         <div className="shop-about-image">
