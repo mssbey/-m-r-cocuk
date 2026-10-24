@@ -45,7 +45,7 @@ export const siteConfig = {
   /** Yayına alınacak alan adı. Ortam değişkeninden okunur, yoksa buraya düşer. */
   siteUrl:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-    "https://www.omurcocuk.com.tr",
+    "https://www.omurcocuk.com",
 
   locale: "tr-TR",
 

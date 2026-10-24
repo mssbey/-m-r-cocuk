@@ -104,7 +104,7 @@ cp .env.example .env.local
 ```
 
 ```
-NEXT_PUBLIC_SITE_URL=https://www.omurcocuk.com.tr
+NEXT_PUBLIC_SITE_URL=https://www.omurcocuk.com
 ```
 
 Bu değer; canonical URL, Open Graph, sitemap.xml ve yapılandırılmış
@@ -424,10 +424,10 @@ npm run build
 **Statik export ile (varsayılan, `httpdocs` vb.):**
 1. `out/` klasörünün içeriğini hosting panelinizin web kök dizinine
    yükleyin (bkz. [Statik Export ile Yayınlama](#statik-export-ile-yayınlama)).
-2. `www.omurcocuk.com.tr` alan adını hosting sağlayıcınızın verdiği DNS
+2. `www.omurcocuk.com` alan adını hosting sağlayıcınızın verdiği DNS
    kayıtlarıyla (genellikle bir `A` kaydı) yönlendirin.
 3. `NEXT_PUBLIC_SITE_URL` değerini `.env.local` içinde
-   `https://www.omurcocuk.com.tr` olarak ayarlayıp **yeniden build alın**
+   `https://www.omurcocuk.com` olarak ayarlayıp **yeniden build alın**
    (statik export'ta bu değer yalnızca build anında okunur).
 
 **Alternatif — Node.js destekli hosting (Vercel vb.):**
@@ -441,9 +441,9 @@ npm run build
 ## Google Search Console Kurulumu
 
 1. [Google Search Console](https://search.google.com/search-console)
-   üzerinde `https://www.omurcocuk.com.tr` mülkünü ekleyin.
+   üzerinde `https://www.omurcocuk.com` mülkünü ekleyin.
 2. Doğrulamayı DNS TXT kaydı veya HTML dosya yöntemiyle tamamlayın.
-3. Site yayına alındıktan sonra `https://www.omurcocuk.com.tr/sitemap.xml`
+3. Site yayına alındıktan sonra `https://www.omurcocuk.com/sitemap.xml`
    adresini "Site Haritaları" bölümünden gönderin (sitemap otomatik
    olarak `app/sitemap.ts` tarafından üretilir).
 
