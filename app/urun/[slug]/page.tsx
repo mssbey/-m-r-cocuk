@@ -18,7 +18,7 @@ import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductGrid } from "@/components/product/ProductGrid";
 import { FavoriteButton } from "@/components/product/FavoriteButton";
 import { ZoomableImage } from "@/components/shared/ImageLightbox";
-import { getParentSets, getSetPieces, isRoomSet } from "@/lib/room-sets";
+import { getOtherRoomSets, getParentSets, getSetPieces, isRoomSet } from "@/lib/room-sets";
 
 export function generateStaticParams() {
   return getAllProducts().map((p) => ({ slug: p.slug }));
@@ -70,6 +70,8 @@ export default async function ProductDetailPage({
   const related = getRelatedProducts(product, 8)
     .filter((p) => !shown.has(p.id))
     .slice(0, 4);
+  related.forEach((p) => shown.add(p.id));
+  const otherRooms = getOtherRoomSets(product, all, shown);
 
   const productUrl = absoluteUrl(`/urun/${product.slug}`);
   const whatsappUrl = buildProductWhatsAppUrl(product.name, productUrl);
@@ -263,6 +265,20 @@ export default async function ProductDetailPage({
           <h2 className="font-display text-2xl text-brand-navy">Benzer Ürünler</h2>
           <div className="mt-6">
             <ProductGrid products={related} />
+          </div>
+        </section>
+      ) : null}
+
+      {otherRooms.length > 0 ? (
+        <section className="mt-16">
+          <div className="flex items-end justify-between gap-4">
+            <h2 className="font-display text-2xl text-brand-navy">Diğer Çocuk Odaları</h2>
+            <Link href="/koleksiyonlar" className="flow-text-link text-sm">
+              Tümünü gör →
+            </Link>
+          </div>
+          <div className="mt-6">
+            <ProductGrid products={otherRooms} />
           </div>
         </section>
       ) : null}

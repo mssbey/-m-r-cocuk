@@ -36,6 +36,30 @@ export function getSetPieces(set: Product, all: Product[]): Product[] {
   );
 }
 
+/**
+ * Ürün sayfasında "Diğer Çocuk Odaları" olarak önerilecek oda takımları.
+ * Ürünün (ya da ait olduğu takımın) kategorisindeki takımlar öne alınır;
+ * oda fotoğrafı olan takımlar fotoğrafsızlardan önce gelir.
+ */
+export function getOtherRoomSets(
+  product: Product,
+  all: Product[],
+  exclude: Set<string>,
+  limit = 4,
+): Product[] {
+  const preferred = new Set(
+    [product, ...getParentSets(product, all)].filter(isRoomSet).map((p) => p.category),
+  );
+  const score = (p: Product) =>
+    (preferred.has(p.category) ? 0 : 2) + (hasRoomOverview(p) ? 0 : 1);
+  return all
+    .filter((p) => isRoomSet(p) && !exclude.has(p.id) && p.collection !== product.collection)
+    .map((p, i) => ({ p, i }))
+    .sort((a, b) => score(a.p) - score(b.p) || a.i - b.i)
+    .slice(0, limit)
+    .map(({ p }) => p);
+}
+
 export function getParentSets(piece: Product, all: Product[]): Product[] {
   if (isRoomSet(piece)) return [];
   return all.filter(
